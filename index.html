@@ -1,355 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f4f1ec">
-<title>Shelf &amp; Sleeve</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shelf & Sleeve — Book & Vinyl Collection</title>
+<meta name="theme-color" content="#1b1b1f">
 <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlNoZWxmICYgU2xlZXZlIiwgInNob3J0X25hbWUiOiAiU2hlbGYgJiBTbGVldmUiLCAiZGVzY3JpcHRpb24iOiAiVHJhY2sgeW91ciBib29rIGFuZCB2aW55bCBjb2xsZWN0aW9uIiwgInN0YXJ0X3VybCI6ICIuLyIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjZjRmMWVjIiwgInRoZW1lX2NvbG9yIjogIiNmNGYxZWMiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FJQUFBRGR2dnRRQUFBRU4wbEVRVlI0bk8zZHU0M2NWaGlHWWNwd29nTGN4bmFnU0ZBRHp0eUdBY2V1d3BFYlVBc09GS2tpQXdhVU9xQXdlOUZjU0g2SDVMazhUN3FMWFY3ZS9UbVlIZks4Ky96cGFZS3RmanA3QTJpYmdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlJaUFpQWlJaUlDSUNJaUlnSWdJaUlpQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlJaUFpQWlJaUlDSUNJaUlnSWdJaU1qUFoyOUFiNzYrLzdqcSt6OTgrN0xUbGh4RFFKRzF1U3o1Q1cwbEphQXQ4bTZXL1BBbVNoTFFVcnRHOC9BM1ZodVRnQjQ3UHAxYjIxQmhSZ0s2cVladTNxanc2aWFnS3lwTTU0MTZCcEtBWHFrL25aZHF5TWdiaWMvYXF1ZmkzTTAyZ2FicDdIT1FPM0VValI1UTYrbThkRXBHUTEvQ2Vxcm40dUNkR2plZ0x1dVpIYmxySTE3Q09rN240ckRMMlhBVGFJUjZMZzdZMmJFQ0dxcWUyZDY3UEZCQUE5WXoyM1hIUndsbzJIcG0rKzMrRUFFTlhzOXNwNFBRZjBEcXVkampVSFFla0hyZUtINUFlZzVJUFZlVlBTemRCcVNlT3dvZW5IWHZSUC8xeTYrbGZuRWZudjc3OSt4TjJPanIrNDlGM3FmdWRnTHhVSkU1SkNBaUFocGFQb1FFTkxxd0lRRVJOU1FnSWdKaW1vSWhKQ0FpQXVLN2JVTklRRHpiMEpDQWlBaUlWOVlPSVFFUkVSQnZyUnBDQWlLeTd2TkEvL3o5KzA3YjBhZy9mdnZ6N0UwNG1RbkVGY3V2WWdJaUlpQ3VXemlFQkVSRVFFUUVSRVJBM0xUa1paQ0FpSXo0aUx2RDNMcHpyNmU3WmsyZ1hYejQ5dVhPZlovM3YxcVZoNjJiUUlVdEwyUCt6dGFua1FsVTBvYTUwc29vdWtWQXhXeE9vZW1HQkZSR0dFRzdEUW1vZ0NLbnY5R0dCSlFxZU9McmJPait5M3dCRVJGUXBQak1xSE1JM1NFZ0lnS3FUbHREU0VCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkZTZHRqNWlKaUFpQW9vVW54WnRqWjlKUUlRRWxDbzRNK29jUC9mL055ZWdBb3FjK0RycmVVaEFaWVNudjlGNkpnRVZ0RG1DZHV1WkJGVFdoaFNhcm1keVoycHhjeEJMUGhUV2Vqb3pBZTNpZmtZTnBmUHdMMEZBTzJvb2xNMjhCaUlpSUc1YThrcE9RRVFFUkVSQVJBVEVkUXZ2YnhRUUVRRnh4ZkxicXdWRVJFQkVCTVJicXg0UElpQWlBdUtWdFU4bkVoQVJBZkZzdzhQUkJNUjMyeDZ0SnlBaUFtS2FnaWQ3Q29pSWdJZ2VMQ3lnMFlXUHBSYlEwUEtIbWd1SWlJREdWV1JOQlFFTnF0U0tIQUlhVWNIMVhBUTBuTEtyQVFsb0xNWFhraExRUVBaWWlVeEFvOWhwSFRzQkRXRy9WUkFGMUw5ZDE5QVVVT2YyWG9GVlFEMDdZUDFlajdqcjAyRkxQNXRBSFRweTRYQUI5ZWJnWmVkZHd2cHhjRG96QWZYZ2xIUm1MbUhOTzdHZXlRUnEycm5wekFUVXBCclNtUW1vSmZWMGN5R2dObFNZemt4QTlhbzJtcGNFVkowbXVya1FVT1RIazcxMmlhZTJjdm1SZ0FwclBZaTF2SkZJUkVCRUJFVGszZWRQVDJkdkF3MHpnWWdJaUlpQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlJaUFpQWlJaUlDSUNJaUlnSWdJaUlpQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaVB3UG80enRpZTNvellVQUFBQUFTVVZPUks1Q1lJST0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQUlBQUFCN0drT3RBQUFNZ1VsRVFWUjRuTzNkUFhKVXl4bkg0ZVlXQ1F2d050Z0JFVVhxd0prWDR0aXI4QjRJdlFFaXZDRlh1WXJVZ1Z3cUdZbGhQdnJqN2Y0L1QzeXZwZ2ZPZVgvZFp5VDA3dXVYancyQVBIK3NYZ0FBYXdnQVFDZ0JBQWdsQUFDaEJBQWdsQUFBaEJJQWdGQUNBQkJLQUFCQ0NRQkFLQUVBQ0NVQUFLRUVBQ0NVQUFDRUVnQ0FVQUlBRUVvQUFFSUpBRUFvQVFBSUpRQUFvUVFBSUpRQUFJUVNBSUJRQWdBUVNnQUFRZ2tBUUNnQkFBZ2xBQUNoQkFBZ2xBQUFoQklBZ0ZBQ0FCQktBQUJDQ1FCQUtBRUFDQ1VBQUtFRUFDQ1VBQUNFRWdDQVVBSUFFRW9BQUVJSkFFQW9BUUFJSlFBQW9RUUFJSlFBQUlRU0FJQlFBZ0FRU2dBQVFna0FRQ2dCQUFnbEFBQ2hCQUFnbEFBQWhCSUFnRkFDQUJCS0FBQkNDUUJBS0FFQUNDVUFBS0VFQUNDVUFBQ0VFZ0NBVUFJQUVFb0FBRUlKQUVBb0FRQUlKUUFBb1FRQUlKUUFBSVFTQUlCUUFnQVFTZ0FBUWdrQVFDZ0JBQWdsQUFDaEJBQWdsQUFBaEJJQWdGQUNBQkJLQUFCQ0NRQkFLQUVBQ0NVQUFLRUVBQ0NVQUFDRUVnQ0FVQUlBRUVvQUFFSUpBRUFvQVFBSTlYNzFBb0EzZlAvd3VlTlgrL1RqVzhldnhqRUVBSmJwTytYdmV5RnRTQ1lBTU1PMFdYK3JOeGVtQ2lFRUFJWW9PL0d2OGRQaTllQlVBZ0I5YkQzeEw5T0RVd2tBM08vZ29YL0J5M2N0QmxzVEFMaFo1dHgvMC9NZmhSTHNTQURnV3ViK0JVcXdJd0dBU3d6OVczbEF0QkVCZ0RlWSsxMDRGaFFuQVBCL2pQNFJudjVVWmFBYUFZRFd6UDBwSEFpcUVRRFNHZjN6T1JBVUlRQ0VNdmVYY3lCWVRnQ0lZL1JYNDBDd2lnQVF4T2l2VEFibUV3QWlHUDI3a0lHWkJJRERHZjA3a29FNUJJQmpHZjI3azRIUkJJQURHZjBua1lGeEJJQ2pHUDJua29FUkJJQkRHUDBKWktBdkFXQjdSbjhhR2VqbGo5VUxnSWVZL3JIODFUL09DWUJkdWY5eEZIaVFBTEFmbzUrWFpPQnVIZ0d4R2RPZk43a3c3dUFFd0RiYzRWem1LSEFySndEMllQcHpKWmZLOVp3QXFNNzl6SzBjQmE3a0JFQnBwajkzYy9IOGxoTUFSYmw3ZVp5andHVk9BRlJrK3RPUnkrbFhCSUJ5M0s1MDU2SjZrMGRBRk9JdVpSeVBnMTV6QXFBSzA1OEpYR1l2Q1FBbHVDMlp4c1gyVEFCWXp3M0paQzY1Sno0RFlDWDNJYXY0U0tBNUFiQ1E2Yzl5NFJlaEFMQkcrSTFISGNtWG9nQ3dRUEl0UjBHeEY2UUFNRnZzelVabG1aZWxBREJWNW0zR0ZnSXZUZ0ZnbnNBYmpMMmtYYUsrRFpRWjB1NHI5aFgxN2FGT0FBeG4rck9ka0l0V0FCZ3I1RWJpUEFtWHJnQXdVTUl0eE1HT3Y0QUZnRkdPdjNsSWNQWmxMQUFNY2ZadFE1U0RMMllCb0wrRGJ4Z3luWHBKQ3dDZG5YcXJFTzdJQzFzQUFFSUpBRDBkdVV1Q0orZGQzZ0pBTitmZEh2Q1R3eTV5QWFDUHcyNE0rSldUTG5VQm9JT1RiZ240cldNdWVBSGdVY2ZjREhDOU15NTdBZUFoWjl3R2NJY0RMbjRCNEg0SDNBRHdpTjF2Z1dXL0QrQWZmL3JMcXBlR1FUNys1OStybHdBM2NBSUF1Ti9XaHdBQkFIakl2ZzBRQUlCSGJkb0FBUURvWU1jR0NBQkFLQUVBNkdPN1E0QUFBSFN6VndNRUFLQ25qUm9nQUFDaEJBQ2dzMTBPQVFJQTBOOFdEUkFBZ0ZBQ0FEQkUvVU9BQUFDTVVyd0JBZ0FRU2dBQUJxcDhDQkFBZ0xIS05rQUFBRUlKQU1Cd05ROEJBZ0F3UThFR0NBQkFLQUVBbUtUYUlVQUFBRUlKQU1BOHBRNEJBZ0FRU2dBQXBxcHpDQkFBZ0ZBQ0FEQmJrVU9BQUFBc1VLRUJBZ0FRU2dBQTFsaCtDQkFBZ0ZBQ0FMRE0ya09BQUFDRUVnQ0FVQUlBc05MQ3AwQUNBQkJLQUFBV1czVUlFQUNBVUFJQXNONlNRNEFBQUlSNjkvWEx4eVV2L09kLy9tdko2OEk0Zi92cjMxY3ZnYjE5K3ZGdDVzczVBUUNFRWdDQVVBSUFVTVhrajRJRkFDQ1VBQUFVTXZNUUlBQUFvUVFBSUpRQUFOUXk3U21RQUFDRUVnQ0FVQUlBVU02Y3AwQUNBQkJLQUFCQ0NRQkFSUk9lQWdrQVFDZ0JBQWdsQUFDaEJBQ2dxTkVmQXdnQVFDZ0JBQWdsQUFCMURYMEtKQUFBb1FRQUlKUUFBSVI2djNvQndMVSsvZmoyMi85bTVtK1VaWTd2SHo1ZjgxZC9Cd0dBdXU2NDdYLzZYL1NBQ3dRQXl1bTQzWHYrVWtyQWF3SUFoUXc2NlQ5L1pSbmdKUUdBRXNhTi90ZXZJZ004OFYxQXNOaW5IOS9tVFArRnI4aURCalhiQ1FDV1dUdUZuUVp3QW9BMWl1ekJpeXlESlFRQUZpZzFka3N0aHBrRUFHWXJPSEFMTG9rSkJBRG1xZnpwYStXMTBjWjhXaU1BTU1rVzQzV0xSZEtMQU1BTUd3M1dqWmJLZ3dRQUlKUUF3SERiN2FtM1d6RDNFUUFZYTlOaHV1bXl1WWtBd0VCYmo5R3RGMytrN3Q4SUpBQXd5Z0VEOUlDM3dBVUNBQkJLQUdDSVkvYk94N3dSWGhNQWdGQUNBUDBkdG1zKzdPM3dUQUFBUWdrQWRIYmtmdm5JTjRVQUFJUVNBT2pwNEozeXdXOHRsZ0FBYktQdkR3TUxBRUFvQVlCdWpuOUljdndiVENNQUFLRUVBQ0NVQUFDRUVnRGdCajRHT0lrQUFJUVNBSUJRQWdBUVNnQUFRZ2tBUUNnQkFBZ2xBQUNoQkFBZ2xBQUFoQklBZ0ZBQ0FCQktBQUJDQ1FCd2c3Ni9rcEMxQkFBZ2xBQUFoQklBZ0ZBQ0FOMGMvM3o4K0RlWVJnQUFRZ2tBd0RiNi9rcE9BWUNlRG41SWN2QmJpeVVBQUtFRUFEbzdjcWQ4NUp0Q0FBQkNDUUQwZDloKytiQzN3ek1CQUFnbEFEREVNYnZtWTk0SXJ3a0FRQ2dCZ0ZFTzJEc2Y4QmE0UUFCZ29LMEg2TmFMUDFMZkh3TnVBZ0NqYlRwR04xMDJOeEVBR0c2N1licmRncm1QQUFDRUVnQ1lZYU05OVVaTDVVRUNBSk5zTVZpM1dDUzl2Ris5QUFqeU5GNjdmeTlIRjBaL2NTTXVHeWNBbUszZ3FDMjRKQ1lRQUZpZzFNQXR0UmhtRWdCWW84allMYklNbHZBWkFDeXo5aU1Cb3g4QmdNWG1aOERvMzg2Z3kwTUFvSVE1R1RENmVVa0FvSkJ4R1RENmVVMEFvSnpuWWYxNENjeDlMaEFBcU91bjhYMU5EMHg4cmljQXNBM0RQZE80VDRiOEhBQkFLQUVBQ0NVQUFLRUVBS0N1b1Q4YUlnQUFvUVFBSUpRQUFCUTErcDhHRVFDQVVBSUFFRW9BQUVJSkFFQkZFMzVGaEFBQWhCSUFnRkFDQUZET25GOFJLZ0FBb1FRQUlKUUFBTlF5NS9sUEV3Q0FXQUlBRUVvQUFBcVo5dnluQ1FCQUxBRUFxR0xtOXI4SkFFQXNBUUFJSlFBQUpVeCsvdE1FQUNDV0FBQ3NOMy83M3dRQUlKWUFBQ3kyWlB2ZkJBQWdsZ0FBckxScSs5OEVBQ0NXQUFDRUVnQ0FaUlkrLzJrQ0FCQkxBQURXV0x2OWJ3SUFFRXNBQUJaWXZ2MXZBZ0F3WDRYcDN3UUFJSllBQUV4VlpQdmZCQUFnbGdBQXpGTm4rOThFQUNDV0FBQk1VbXI3M3dRQUlKWUFBTXhRYmZ2ZkJBQmdnb0xUdndrQVFDd0JBQmlyNXZhL0NRREFVR1duZnhNQWdGZ0NBREJLNWUxL0V3Q0FRWXBQL3lZQUFMRUVBS0MvK3R2L0pnQUEzVzB4L1pzQUFNUVNBSUNlZHRuK053RUE2R2lqNmQ4RUFLQ1h2YVovRXdDQVdBSUEwTUYyMi84bUFBQ1AyM0g2TndFQWVOQ20wNzhKQU1BajlwMytUUUFBWWdrQXdKMjIzdjQzQVFDNHorN1R2d2tBd0IwT21QNU5BQUJ1ZGNiMGJ3SUFjSk5qcG44VEFJRHJuVFQ5bXdBQVhPbXc2ZDhFQUNDV0FBRDgzbm5iL3lZQUFMOTE1UFJ2QWdCdzJhblR2d2tBd0FVSFQvOG1BQUMvY3ZiMGJ3SUE4S2JqcDM4VEFJRFhFcVovYSszOTZnVUFGQkl5K3A4NEFRRDhUOVQwYndJQThDUnQramNCQUdpUjA3OEpBRURtOUc4Q0FJU0xuZjVOQUlCa3lkTy8rVFpRSUZQNDZIL2lCQURFTWYyZkNBQ1F4ZlIvSmdCQUVOUC9KWjhCQUJHTS90ZWNBSUR6bWY1dkVnRGdjS2IvcjNnRUJCekw2TC9NQ1FBNGsrbi9XMDRBd0dtTS9pczVBUUJITWYydjV3UUFITUxvdjVVVEFIQUMwLzhPVGdEQTNveit1d2tBc0N1ai8wRWVBUUZiTXYwZjV3UUFiTWJvNzBVQWdHMFkvWDBKQUxBQm8zOEVBUUJLTS9ySEVRQ2dLS04vTkFFQXlqSDY1eEFBb0JDamZ5WUJBRW93K3VjVEFHQXhvMzhWQVFEV01QZVhFd0JnTnFPL0NBRUFKakgzcXhFQVlEaWp2eVlCQUVZeDk0c1RBS0FuUTM4akFnQjBZTzd2U0FDQSs1bjdXeE1BNERhRy9qRUVBTHA1T1JtL2YvaThjQ1Y5bWZpbkVnQVk0cWVodVZjUFRQd1FBZ0F6dkRsU0sxVEJyRThtQUxETWhlSGJ0dzJtUEc4U0FLakl5R2FDUDFZdkFJQTFCQUFnbEFBQWhCSUFnRkFDQUJCS0FBQkNDUUJBS0FFQUNDVUFBS0VFQUNEVXU2OWZQcTVlQXdBTE9BRUFoQklBZ0ZBQ0FCQktBQUJDQ1FCQUtBRUFDQ1VBQUtFRUFDQ1VBQUNFRWdDQVVBSUFFRW9BQUVJSkFFQW9BUUFJSlFBQW9RUUFJSlFBQUlRU0FJQlFBZ0FRU2dBQVFna0FRQ2dCQUFnbEFBQ2hCQUFnbEFBQWhCSUFnRkFDQUJCS0FBQkNDUUJBS0FFQUNDVUFBS0VFQUNDVUFBQ0VFZ0NBVUFJQUVFb0FBRUlKQUVBb0FRQUlKUUFBb1FRQUlKUUFBSVFTQUlCUUFnQVFTZ0FBUWdrQVFDZ0JBQWdsQUFDaEJBQWdsQUFBaEJJQWdGQUNBQkJLQUFCQ0NRQkFLQUVBQ0NVQUFLRUVBQ0NVQUFDRUVnQ0FVQUlBRUVvQUFFSUpBRUFvQVFBSUpRQUFvUVFBSUpRQUFJUVNBSUJRQWdBUVNnQUFRZ2tBUUNnQkFBZ2xBQUNoQkFBZ2xBQUFoQklBZ0ZBQ0FCRHF2dzZyWFZIWlNzTzlBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmcifV19">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#22261f;
-  --ink-2:#ede9dc;
-  --ink-3:#e2dcc8;
-  --line:#dedace;
-  --paper:#f4f1ec;
-  --mute:#8b8a7e;
-  --acid:#93a87c;
-  --sig:#b23b2e;
-  --r:10px;
-  --safe-b:env(safe-area-inset-bottom,0px);
-}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0}
-[hidden]{display:none!important}
-body{
-  background:var(--paper);color:var(--ink);
-  font-family:'Inter',system-ui,sans-serif;
-  font-size:16px;line-height:1.4;
-  overscroll-behavior-y:none;
-}
-button,input,select,textarea{font-family:inherit;font-size:16px;color:inherit}
-button{cursor:pointer;border:none;background:none}
-
-/* ---------- shell ---------- */
-.wrap{max-width:760px;margin:0 auto;padding:0 14px calc(96px + var(--safe-b))}
-
-header.top{
-  position:sticky;top:0;z-index:40;background:var(--paper);
-  padding:14px 0 10px;border-bottom:1px solid var(--line);
-}
-.brandrow{display:flex;align-items:baseline;gap:10px}
-.brand{font-family:'Space Grotesk';font-weight:700;font-size:22px;letter-spacing:-.02em;white-space:nowrap}
-.brand em{font-style:normal;color:var(--sig)}
-.count{font-family:'Inter';font-size:11px;color:var(--mute);margin-left:auto}
-.status{font-family:'Inter';font-size:11px;color:var(--mute)}
-.status.dirty{color:var(--sig)}
-.status.ok{color:var(--acid)}
-
-/* tabs */
-nav.tabs{display:flex;gap:6px;margin-top:12px;overflow-x:auto;scrollbar-width:none}
-nav.tabs::-webkit-scrollbar{display:none}
-.tab{
-  flex:0 0 auto;padding:8px 13px;border-radius:999px;
-  font-family:'Inter';font-size:12px;letter-spacing:.04em;text-transform:uppercase;
-  color:var(--mute);border:1px solid var(--line);white-space:nowrap;
-}
-.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:700}
-
-/* controls */
-.controls{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-.search{
-  flex:1;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);
-  padding:10px 12px;color:var(--ink);min-width:120px;
-}
-.search::placeholder{color:var(--mute)}
-.selbtn{
-  background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);
-  padding:0 10px;font-family:'Inter';font-size:12px;color:var(--ink);white-space:nowrap;
+:root {
+  --bg: #f6f5f2;
+  --surface: #ffffff;
+  --ink: #1b1b1f;
+  --ink-soft: #63636b;
+  --line: #e5e3dd;
+  --accent: #a8452e;
+  --accent-soft: #f3e0da;
+  --book-color: #3d5a80;
+  --vinyl-color: #6b4e71;
+  --wishlist-color: #b8860b;
+  --radius: 14px;
+  color-scheme: light;
 }
 
-/* ---------- banner ---------- */
-.banner{
-  display:flex;align-items:center;gap:10px;margin-top:14px;
-  background:var(--ink-2);border:1px solid var(--sig);border-left-width:3px;
-  border-radius:var(--r);padding:11px 12px;
-}
-.banner.warn{border-color:#c9a227}
-.btxt{flex:1;min-width:0;font-size:13px;line-height:1.45}
-.btxt b{display:block;font-size:13px;margin-bottom:1px}
-.btxt span{color:var(--mute);font-family:'Inter';font-size:11px}
-.bfix{
-  flex:0 0 auto;background:var(--ink);color:var(--paper);
-  border-radius:999px;padding:12px 15px;font-weight:600;font-size:13px;
-  min-height:44px;
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* ---------- list ---------- */
-ul.list{list-style:none;margin:14px 0 0;padding:0}
-li.row{
-  display:flex;align-items:center;gap:12px;
-  padding:9px 4px;border-bottom:1px solid var(--line);cursor:pointer;
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 10px;
 }
-li.row:last-child{border-bottom:none}
-.cover{
-  flex:0 0 auto;width:38px;height:38px;border-radius:6px;
-  object-fit:cover;background:var(--ink-3);
-}
-.cover-ph{
-  flex:0 0 auto;width:38px;height:38px;border-radius:6px;background:var(--ink-3);
-  display:flex;align-items:center;justify-content:center;font-size:16px;opacity:.5;
-}
-.typedot{
-  flex:0 0 auto;width:8px;height:8px;border-radius:50%;
-}
-.typedot.book{background:var(--ink)}
-.typedot.vinyl{background:var(--sig)}
-.meta{flex:1;min-width:0}
-.title{font-weight:600;font-size:15px;letter-spacing:-.01em;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.sub{font-family:'Inter';font-size:11px;color:var(--mute);
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:2px}
-.empty{text-align:center;color:var(--mute);font-family:'Inter';font-size:13px;padding:50px 20px}
-.empty b{display:block;color:var(--ink);font-family:'Inter';font-weight:500;font-size:16px;margin-bottom:6px}
 
-/* ---------- stats ---------- */
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px}
-.stat-card{background:var(--ink-2);border-radius:var(--r);padding:14px}
-.stat-num{font-family:'Space Grotesk';font-weight:700;font-size:26px;letter-spacing:-.02em}
-.stat-label{font-family:'Inter';font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
-.stats-section{margin-top:26px}
-.stats-h{font-family:'Inter';font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
-.stats-chips{display:flex;flex-wrap:wrap;gap:6px}
-.stats-chip{font-family:'Inter';font-size:11px;background:var(--ink-3);border-radius:999px;padding:5px 10px;color:var(--ink)}
-.stats-hbars{display:flex;flex-direction:column;gap:8px}
-.stats-hbar-row{display:flex;align-items:center;gap:8px;cursor:pointer;padding:3px 0;border-radius:6px}
-.stats-hbar-row:active{background:var(--ink-2)}
-.stats-hbar-label{font-size:12px;width:110px;flex:0 0 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.stats-hbar-track{flex:1;background:var(--ink-3);border-radius:4px;height:8px;overflow:hidden}
-.stats-hbar-fill{background:var(--acid);height:100%;border-radius:4px}
-.stats-hbar-n{font-family:'Inter';font-size:11px;color:var(--mute);width:22px;text-align:right;flex:0 0 auto}
-.stats-filter-chip{
-  display:inline-flex;align-items:center;gap:8px;margin-top:14px;cursor:pointer;
-  background:var(--sig);color:#fff;font-family:'Inter';font-size:11px;
-  padding:7px 12px;border-radius:999px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
 }
-.stats-filter-chip .x{font-size:10px}
 
-/* ---------- fab ---------- */
-.fabs{
-  position:fixed;right:14px;bottom:calc(14px + var(--safe-b));z-index:45;
-  display:flex;flex-direction:column;gap:10px;
+.brand-mark {
+  color: var(--accent);
+  font-size: 22px;
 }
-.fab{
-  width:54px;height:54px;border-radius:50%;background:var(--sig);color:#fff;
-  font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 24px rgba(0,0,0,.5);
-}
-.fab.ghost{background:var(--ink-3);color:var(--ink);width:44px;height:44px;font-size:17px;
-  border:1px solid var(--line);align-self:flex-end}
 
-/* ---------- sheet ---------- */
-.scrim{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:none}
-.scrim.on{display:block}
-.sheet{
-  position:fixed;left:0;right:0;bottom:0;z-index:51;
-  background:var(--ink-2);border-top:1px solid var(--line);
-  border-radius:18px 18px 0 0;
-  padding:8px 16px calc(20px + var(--safe-b));
-  max-height:92vh;overflow-y:auto;
-  transform:translateY(100%);transition:transform .22s ease;
+.sync-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-soft);
 }
-.sheet.on{transform:translateY(0)}
-.grab{width:38px;height:4px;border-radius:2px;background:var(--line);margin:6px auto 14px}
-.sheet h2{font-family:'Space Grotesk';font-weight:700;font-size:17px;margin:0 0 14px;letter-spacing:-.01em}
-label.f{display:block;margin-bottom:12px}
-label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
-  text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:5px}
-.in{
-  width:100%;background:var(--paper);border:1px solid var(--line);
-  border-radius:var(--r);padding:11px 12px;color:var(--ink);
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b7b7b7;
+  display: inline-block;
 }
-.in:focus,.search:focus{outline:2px solid var(--sig);outline-offset:1px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.acts{display:flex;gap:10px;margin-top:18px}
-.btn{flex:1;padding:14px;border-radius:var(--r);font-weight:600;font-size:15px}
-.btn.primary{background:var(--ink);color:var(--paper)}
-.btn.ghost{background:var(--ink-3);color:var(--ink);border:1px solid var(--line)}
-.btn.danger{background:none;color:var(--sig);border:1px solid var(--sig);flex:0 0 auto;padding:14px 16px}
-.note{font-family:'Inter';font-size:11px;color:var(--mute);line-height:1.6;
-  border-left:2px solid var(--line);padding-left:10px;margin:0 0 14px}
-.note b{color:var(--ink)}
-.note.warn{color:var(--sig);border-color:var(--sig)}
-.note.ok{color:var(--acid);border-color:var(--acid)}
-.toast{
-  position:fixed;left:50%;transform:translateX(-50%) translateY(20px);
-  bottom:calc(84px + var(--safe-b));z-index:60;
-  background:var(--ink);color:var(--paper);font-family:'Inter';font-size:12px;font-weight:700;
-  padding:10px 16px;border-radius:999px;opacity:0;transition:.2s;pointer-events:none;
+.dot.ok { background: #2e8b57; }
+.dot.syncing { background: #d99a00; animation: pulse 1s infinite; }
+.dot.err { background: #c0392b; }
+
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
-.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
-.version{
-  position:fixed;left:10px;bottom:calc(6px + var(--safe-b));z-index:44;
-  font-family:'Inter';font-size:10px;color:var(--mute);
-  pointer-events:none;user-select:none;opacity:.75;
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--line);
+  overflow-x: auto;
 }
-.cover-row{display:flex;align-items:center;gap:10px;margin:0 0 12px}
-.cover-row img{width:44px;height:44px;border-radius:8px;object-fit:cover;background:var(--ink-3);display:none}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.tab-btn {
+  border: none;
+  background: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+main {
+  padding: 16px 20px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.toolbar input[type="search"] {
+  flex: 1 1 200px;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 9px 11px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.btn {
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:hover { background: #efefec; }
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn.primary:hover { opacity: 0.92; }
+
+.btn.danger {
+  color: #b32d1f;
+  border-color: #ecc7bf;
+}
+.btn.danger:hover { background: #fbeae6; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.1s ease;
+}
+.card:hover { transform: translateY(-2px); }
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #efefe9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-cover .placeholder {
+  font-size: 34px;
+  opacity: 0.35;
+}
+
+.type-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 7px;
+  border-radius: 20px;
+  color: #fff;
+}
+.type-badge.book { background: var(--book-color); }
+.type-badge.vinyl { background: var(--vinyl-color); }
+
+.card-body {
+  padding: 8px 10px 10px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-creator {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 40px 0;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.stat-card .num {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.stat-card .label {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.stats-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.stats-block {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.stats-block h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+}
+
+.bar-row .bar-label {
+  width: 90px;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bar-row .bar-track {
+  flex: 1;
+  height: 8px;
+  background: #eeece6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar-row .bar-fill {
+  height: 100%;
+  background: var(--accent);
+}
+
+.bar-row .bar-count {
+  width: 22px;
+  text-align: right;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+
+.settings-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+
+.settings-card h3 { margin-top: 0; }
+
+.settings-card label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.settings-card input {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.muted {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.hint {
+  font-size: 12.5px;
+  margin-top: 8px;
+  min-height: 16px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 15, 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 16px;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 22px;
+  width: 100%;
+  max-width: 460px;
+  margin: auto;
+}
+
+.modal h3 { margin-top: 0; }
+
+.modal label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.modal input, .modal select, .modal textarea {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.image-preview {
+  max-width: 140px;
+  max-height: 140px;
+  border-radius: 10px;
+  margin: 6px 0 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.spacer { flex: 1; }
+
+.detail-modal {
+  max-width: 420px;
+  position: relative;
+}
+
+.close-x {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.detail-cover {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #efefe9;
+  margin-bottom: 14px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line);
+}
+.detail-row span:first-child {
+  color: var(--ink-soft);
+}
+
+.detail-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1b1b1f;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  z-index: 100;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.version {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 11px;
+  padding: 6px 0 18px;
+  opacity: .8;
+}
+
+@media (max-width: 480px) {
+  .form-row { grid-template-columns: 1fr; }
+  .topbar { padding: 14px 14px 8px; }
+  main { padding: 12px 14px 50px; }
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <div class="brandrow">
-      <div class="brand">SHELF<em>&amp;</em>SLEEVE</div>
-      <div class="status" id="status">local</div>
-      <div class="count" id="count"></div>
-    </div>
-    <nav class="tabs" id="tabs" role="tablist">
-      <button class="tab" role="tab" data-k="collection" aria-selected="true">Collection</button>
-      <button class="tab" role="tab" data-k="wishlist" aria-selected="false">Wishlist</button>
-      <button class="tab" role="tab" data-k="stats" aria-selected="false">Stats</button>
-    </nav>
-    <div class="controls" id="controls">
-      <input class="search" id="q" placeholder="Search title or artist/author…" autocomplete="off">
-      <select class="selbtn" id="filterType">
+
+<div id="toast" class="toast" hidden></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">◐</span>
+    <span class="brand-name">Shelf &amp; Sleeve</span>
+  </div>
+  <div class="sync-status" id="syncStatus">
+    <span class="dot" id="syncDot"></span>
+    <span id="syncText">Local only</span>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab-btn active" data-tab="collection">Collection</button>
+  <button class="tab-btn" data-tab="wishlist">Wishlist</button>
+  <button class="tab-btn" data-tab="stats">Stats</button>
+  <button class="tab-btn" data-tab="settings">Settings</button>
+</nav>
+
+<main>
+
+  <!-- COLLECTION TAB -->
+  <section class="tab-panel active" id="panel-collection">
+    <div class="toolbar">
+      <input type="search" id="searchInput" placeholder="Search title or artist/author…">
+      <select id="filterType">
         <option value="">All types</option>
         <option value="book">Books</option>
         <option value="vinyl">Vinyls</option>
       </select>
-      <select class="selbtn" id="filterGenre">
+      <select id="filterGenre">
         <option value="">All genres</option>
       </select>
+      <button class="btn primary" id="addItemBtn">+ Add item</button>
     </div>
-  </header>
+    <div class="grid" id="collectionGrid"></div>
+    <p class="empty-state" id="collectionEmpty" hidden>Nothing here yet. Add your first book or vinyl above.</p>
+  </section>
 
-  <div class="banner" id="banner" hidden>
-    <div class="btxt"><b id="bTitle"></b><span id="bBody"></span></div>
-    <button class="bfix" id="bFix">Set up</button>
-  </div>
+  <!-- WISHLIST TAB -->
+  <section class="tab-panel" id="panel-wishlist">
+    <div class="toolbar">
+      <input type="search" id="wishlistSearchInput" placeholder="Search wishlist…">
+      <button class="btn primary" id="addWishBtn">+ Add to wishlist</button>
+    </div>
+    <div class="grid" id="wishlistGrid"></div>
+    <p class="empty-state" id="wishlistEmpty" hidden>Your wishlist is empty.</p>
+  </section>
 
-  <ul class="list" id="list"></ul>
-</div>
+  <!-- STATS TAB -->
+  <section class="tab-panel" id="panel-stats">
+    <div class="stats-cards" id="statsCards"></div>
+    <div class="stats-breakdown">
+      <div class="stats-block">
+        <h3>By format</h3>
+        <div id="statsFormat" class="bar-list"></div>
+      </div>
+      <div class="stats-block">
+        <h3>By genre</h3>
+        <div id="statsGenre" class="bar-list"></div>
+      </div>
+    </div>
+  </section>
 
-<div class="fabs">
-  <button class="fab ghost" id="settingsBtn" aria-label="Settings">⚙</button>
-  <button class="fab ghost" id="reloadFab" aria-label="Reload from GitHub">⟳</button>
-  <button class="fab" id="addBtn" aria-label="Add item">+</button>
-</div>
+  <!-- SETTINGS TAB -->
+  <section class="tab-panel" id="panel-settings">
+    <div class="settings-card">
+      <h3>GitHub sync</h3>
+      <p class="muted">Connect a GitHub repo so your collection syncs between devices (e.g. this computer and your phone). Data is stored as a JSON file in your repo. Leave disconnected to keep everything only on this device.</p>
+      <label>GitHub username / org
+        <input type="text" id="ghOwner" placeholder="e.g. maxyong">
+      </label>
+      <label>Repository name
+        <input type="text" id="ghRepo" placeholder="e.g. my-collection">
+      </label>
+      <label>Branch
+        <input type="text" id="ghBranch" placeholder="main" value="main">
+      </label>
+      <label>Personal access token
+        <input type="password" id="ghToken" placeholder="fine-grained token, Contents: read & write">
+      </label>
+      <div class="settings-actions">
+        <button class="btn" id="testConnBtn">Test connection</button>
+        <button class="btn primary" id="saveConnBtn">Save &amp; connect</button>
+        <button class="btn danger" id="disconnectBtn">Disconnect</button>
+      </div>
+      <p class="hint" id="connHint"></p>
+    </div>
 
-<div class="scrim" id="scrim"></div>
+    <div class="settings-card">
+      <h3>Backup</h3>
+      <p class="muted">Export your full collection as a JSON file, or import a previously exported file.</p>
+      <div class="settings-actions">
+        <button class="btn" id="exportBtn">Export JSON</button>
+        <button class="btn" id="importBtn">Import JSON</button>
+        <input type="file" id="importFile" accept="application/json" hidden>
+      </div>
+    </div>
+  </section>
 
-<!-- add/edit sheet -->
-<div class="sheet" id="editSheet" role="dialog" aria-modal="true">
-  <div class="grab"></div>
-  <h2 id="editTitle">Add item</h2>
-  <div class="cover-row">
-    <img id="coverPreview">
-    <button class="btn ghost" type="button" id="choosePhotoBtn" style="flex:0 0 auto;padding:10px 14px">Choose photo</button>
-    <input type="file" id="f_image" accept="image/*" hidden>
-  </div>
+</main>
 
-  <label class="f"><span>Type</span>
-    <select class="in" id="f_type">
-      <option value="book">Book</option>
-      <option value="vinyl">Vinyl</option>
-    </select>
-  </label>
+<!-- ADD/EDIT ITEM MODAL -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <form class="modal" id="itemForm">
+    <h3 id="modalTitle">Add item</h3>
+    <input type="hidden" id="itemId">
 
-  <label class="f"><span>Title</span>
-    <input class="in" id="f_title" type="text">
-  </label>
-
-  <label class="f" id="f_creatorLabel"><span>Author</span>
-    <input class="in" id="f_creator" type="text">
-  </label>
-
-  <div class="two">
-    <label class="f"><span>Year</span>
-      <input class="in" id="f_year" type="text" inputmode="numeric" placeholder="e.g. 1998">
-    </label>
-    <label class="f" id="f_formatLabel"><span>Format</span>
-      <input class="in" id="f_format" type="text" placeholder="e.g. Hardcover">
-    </label>
-  </div>
-
-  <div class="two">
-    <label class="f"><span>Genre</span>
-      <input class="in" id="f_genre" type="text" placeholder="e.g. Sci-Fi, Jazz">
-    </label>
-    <label class="f"><span>Condition</span>
-      <select class="in" id="f_condition">
-        <option value="">—</option>
-        <option>New</option>
-        <option>Like New</option>
-        <option>Good</option>
-        <option>Fair</option>
-        <option>Poor</option>
+    <label>Type
+      <select id="f_type">
+        <option value="book">Book</option>
+        <option value="vinyl">Vinyl</option>
       </select>
     </label>
-  </div>
 
-  <div class="two">
-    <label class="f"><span>Price paid</span>
-      <input class="in" id="f_price" type="number" step="0.01" min="0" placeholder="0.00">
+    <label id="f_creatorLabel">Author
+      <input type="text" id="f_creator">
     </label>
-    <label class="f"><span>Status</span>
-      <select class="in" id="f_status">
-        <option value="owned">Owned</option>
-        <option value="wishlist">Wishlist</option>
-      </select>
+
+    <label>Title *
+      <input type="text" id="f_title" required>
     </label>
-  </div>
 
-  <label class="f"><span>Notes</span>
-    <textarea class="in" id="f_notes" rows="2" placeholder="Edition, signed copy, condition notes…"></textarea>
-  </label>
+    <div class="form-row">
+      <label>Year
+        <input type="text" id="f_year" inputmode="numeric" placeholder="e.g. 1998">
+      </label>
+      <label id="f_formatLabel">Format
+        <input type="text" id="f_format" placeholder="e.g. Hardcover">
+      </label>
+    </div>
 
-  <input type="hidden" id="itemId">
+    <div class="form-row">
+      <label>Genre
+        <input type="text" id="f_genre" placeholder="e.g. Sci-Fi, Jazz">
+      </label>
+      <label>Condition
+        <select id="f_condition">
+          <option value="">—</option>
+          <option>New</option>
+          <option>Like New</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+        </select>
+      </label>
+    </div>
 
-  <div class="acts">
-    <button class="btn danger" id="delEdit" style="display:none">Delete</button>
-    <button class="btn ghost" id="cancelEdit">Cancel</button>
-    <button class="btn primary" id="saveEdit">Save</button>
+    <div class="form-row">
+      <label>Price paid
+        <input type="number" id="f_price" step="0.01" min="0" placeholder="0.00">
+      </label>
+      <label>Status
+        <select id="f_status">
+          <option value="owned">Owned</option>
+          <option value="wishlist">Wishlist</option>
+        </select>
+      </label>
+    </div>
+
+    <label>Notes
+      <textarea id="f_notes" rows="2" placeholder="Edition, signed copy, condition notes…"></textarea>
+    </label>
+
+    <label>Cover photo
+      <input type="file" id="f_image" accept="image/*">
+    </label>
+    <img id="f_imagePreview" class="image-preview" hidden>
+
+    <div class="modal-actions">
+      <button type="button" class="btn danger" id="deleteItemBtn" hidden>Delete</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" id="cancelModalBtn">Cancel</button>
+      <button type="submit" class="btn primary">Save</button>
+    </div>
+  </form>
+</div>
+
+<!-- ITEM DETAIL MODAL -->
+<div class="modal-backdrop" id="detailBackdrop" hidden>
+  <div class="modal detail-modal" id="detailModal">
+    <button class="close-x" id="closeDetailBtn">&times;</button>
+    <div id="detailContent"></div>
   </div>
 </div>
 
-<!-- settings sheet -->
-<div class="sheet" id="setSheet" role="dialog" aria-modal="true">
-  <div class="grab"></div>
-  <h2>Settings</h2>
-  <p class="note">Your token stays in this browser's storage and is sent only to <b>api.github.com</b>. It is never shown to anyone else. Clearing your browser data removes it — you'd paste it again.</p>
-  <label class="f"><span>GitHub repo</span><input class="in" id="repoIn" placeholder="yourname/your-repo" autocomplete="off"></label>
-  <label class="f"><span>Branch</span><input class="in" id="branchIn" placeholder="main" autocomplete="off"></label>
-  <label class="f"><span>Personal access token</span><input class="in" id="tokIn" type="password" placeholder="github_pat_…" autocomplete="off"></label>
-  <div class="acts" style="margin-top:2px">
-    <button class="btn ghost" id="testConnBtn">Test connection</button>
-  </div>
-  <p class="note" id="connHint" style="display:none"></p>
-  <div class="acts">
-    <button class="btn ghost" id="closeSet">Close</button>
-    <button class="btn primary" id="saveSet">Save settings</button>
-  </div>
-  <div class="acts" style="margin-top:10px">
-    <button class="btn danger" id="forgetBtn">Forget token</button>
-  </div>
-
-  <h2 style="margin-top:22px">Backup</h2>
-  <p class="note">Export your full collection as a JSON file, or import a previously exported one.</p>
-  <div class="acts">
-    <button class="btn ghost" id="exportBtn">Export JSON</button>
-    <button class="btn ghost" id="importBtn">Import JSON</button>
-    <input type="file" id="importFile" accept="application/json" hidden>
-  </div>
-
-  <p class="note" style="margin-top:18px">Shelf &amp; Sleeve <b id="verLabel"></b></p>
-</div>
-
-<div class="toast" id="toast"></div>
 <div class="version" id="versionTag"></div>
 
 <script>
@@ -358,17 +697,13 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
    Storage: localStorage is always the fast local copy. If GitHub sync is configured,
    the same data.json is read/written in the user's repo so multiple devices stay in sync. */
 
-const VERSION = 'v1.4';
+const VERSION = 'v1.5';
 const STORAGE_KEY = 'shelfsleeve_data_v1';
 const SETTINGS_KEY = 'shelfsleeve_settings_v1';
-const $ = (s) => document.querySelector(s);
 
 let state = { updatedAt: null, items: [] };
-let editingImageData; // undefined = no change, null = cleared, string = new image
-let editingId = null;
-let activeTab = 'collection';
-let statsFilter = null; // {type:'genre', value:'Rock'} or null
-let authError = null;
+let editingImageData = null; // holds a newly chosen (resized) image for the open form, or undefined/null
+let currentDetailId = null;
 
 /* ---------------- persistence: local ---------------- */
 
@@ -380,6 +715,7 @@ function loadLocal() {
     if (!parsed || !Array.isArray(parsed.items)) return { updatedAt: null, items: [] };
     return parsed;
   } catch (e) {
+    console.error('Failed to load local data', e);
     return { updatedAt: null, items: [] };
   }
 }
@@ -432,14 +768,18 @@ async function ghGetFile(settings, path) {
   const url = `https://api.github.com/repos/${settings.owner}/${settings.repo}/contents/${encodeURIComponent(path)}?ref=${encodeURIComponent(settings.branch || 'main')}&_=${Date.now()}`;
   const res = await fetch(url, { headers: ghHeaders(settings.token) });
   if (res.status === 404) return null;
-  if (!res.ok) { const e = new Error(`GitHub GET ${path} failed: ${res.status}`); e.status = res.status; throw e; }
+  if (!res.ok) throw new Error(`GitHub GET ${path} failed: ${res.status}`);
   const json = await res.json();
   return { text: b64ToUtf8(json.content), sha: json.sha };
 }
 
 async function ghPutFile(settings, path, contentStr, message, sha) {
   const url = `https://api.github.com/repos/${settings.owner}/${settings.repo}/contents/${encodeURIComponent(path)}`;
-  const body = { message, content: utf8ToB64(contentStr), branch: settings.branch || 'main' };
+  const body = {
+    message,
+    content: utf8ToB64(contentStr),
+    branch: settings.branch || 'main'
+  };
   if (sha) body.sha = sha;
   const res = await fetch(url, {
     method: 'PUT',
@@ -447,10 +787,8 @@ async function ghPutFile(settings, path, contentStr, message, sha) {
     body: JSON.stringify(body)
   });
   if (!res.ok) {
-    const errJson = await res.json().catch(() => ({}));
-    const e = new Error(`GitHub PUT ${path} failed: ${res.status} ${errJson.message || ''}`);
-    e.status = res.status;
-    throw e;
+    const errText = await res.text().catch(() => '');
+    throw new Error(`GitHub PUT ${path} failed: ${res.status} ${errText}`);
   }
   return res.json();
 }
@@ -458,62 +796,25 @@ async function ghPutFile(settings, path, contentStr, message, sha) {
 async function ghTestConnection(settings) {
   const url = `https://api.github.com/repos/${settings.owner}/${settings.repo}`;
   const res = await fetch(url, { headers: ghHeaders(settings.token) });
-  if (res.status === 401) { const e = new Error('Token is invalid or expired (401).'); e.status = 401; throw e; }
-  if (res.status === 404) { const e = new Error("Repo not found, or token can't see it (404)."); e.status = 404; throw e; }
-  if (!res.ok) { const e = new Error(`GitHub said ${res.status}.`); e.status = res.status; throw e; }
-  const json = await res.json();
-  if (json.permissions && json.permissions.push === false) {
-    const e = new Error('Connected, but token lacks write access to this repo.');
-    e.status = 403;
-    throw e;
-  }
-  return json;
+  if (!res.ok) throw new Error(`Could not reach repo (${res.status})`);
+  return res.json();
 }
 
-function classifyError(e) {
-  if (e && e.status === 401) return 'expired';
-  if (e && e.status === 403) return 'denied';
-  if (e && e.status === 404) return 'norepo';
-  return null;
-}
+/* ---------------- sync status UI ---------------- */
 
-/* ---------------- status + banner ---------------- */
-
-function setStatus(cls, txt) {
-  const s = $('#status');
-  s.className = 'status' + (cls ? ' ' + cls : '');
-  s.textContent = txt;
-}
-
-function bannerFor(kind) {
-  const B = $('#banner');
-  if (!kind) { B.hidden = true; return; }
-  const M = {
-    notoken: ['Not connected to GitHub', 'Edits save on this device only. Add a token to sync.', '', 'Set up'],
-    expired: ['Token expired or invalid', 'GitHub rejected it (401). Generate a new one to save again.', '', 'Fix'],
-    denied: ['Token lacks write access', 'Needs Contents: Read and write on this repo (403).', '', 'Fix'],
-    norepo: ['Repo not found', "Check the repo name and that the token can see it (404).", '', 'Fix']
-  }[kind];
-  if (!M) { B.hidden = true; return; }
-  $('#bTitle').textContent = M[0];
-  $('#bBody').textContent = M[1];
-  B.className = 'banner' + (M[2] === 'warn' ? ' warn' : '');
-  $('#bFix').textContent = M[3];
-  B.hidden = false;
-}
-
-function updateBanner() {
-  if (authError) { bannerFor(authError); return; }
-  if (!isConfigured(getSettings())) { bannerFor('notoken'); return; }
-  bannerFor(null);
+function setSyncStatus(kind, text) {
+  const dot = document.getElementById('syncDot');
+  const label = document.getElementById('syncText');
+  dot.className = 'dot' + (kind ? ' ' + kind : '');
+  label.textContent = text;
 }
 
 function toast(msg) {
-  const t = $('#toast');
-  t.textContent = msg;
-  t.classList.add('on');
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.hidden = false;
   clearTimeout(toast._t);
-  toast._t = setTimeout(() => t.classList.remove('on'), 2200);
+  toast._t = setTimeout(() => { el.hidden = true; }, 2600);
 }
 
 /* ---------------- sync orchestration ---------------- */
@@ -521,12 +822,12 @@ function toast(msg) {
 async function syncOnLoad() {
   const settings = getSettings();
   if (!isConfigured(settings)) {
-    // No token in this browser — most likely someone viewing a shared link, or a
-    // fresh device of mine. Load the public data.json sitting next to this page
-    // (works with a plain, unauthenticated fetch on GitHub Pages) so the collection
-    // is pre-populated on launch instead of starting empty. There is no write path
-    // here, so anything a visitor adds/edits only lives in their own browser.
-    setStatus('', 'loading…');
+    // No token in this browser — likely someone viewing a shared link, or a fresh
+    // device of mine. Try loading the public data.json sitting next to this page
+    // (a plain, unauthenticated fetch works fine on GitHub Pages for a public repo)
+    // so the collection is pre-populated on launch instead of starting empty.
+    // There's no write path here, so anything a visitor adds/edits stays local to them.
+    setSyncStatus('', 'Loading…');
     try {
       const res = await fetch('./data.json?t=' + Date.now(), { cache: 'no-store' });
       if (res.ok) {
@@ -538,53 +839,47 @@ async function syncOnLoad() {
           saveLocal(state);
           renderAll();
         }
-        setStatus('', 'viewing');
+        setSyncStatus('', 'Viewing');
       } else {
-        setStatus('', 'local');
+        setSyncStatus('', 'Local only');
       }
     } catch (e) {
-      setStatus('', 'local');
+      setSyncStatus('', 'Local only');
     }
-    updateBanner();
     return;
   }
-  setStatus('', 'syncing…');
+  setSyncStatus('syncing', 'Syncing…');
   try {
     const remote = await ghGetFile(settings, 'data.json');
     if (!remote) {
       await pushToGitHub('Initialize collection data');
-      authError = null;
-      setStatus('ok', 'synced');
+      setSyncStatus('ok', 'Synced');
+      return;
+    }
+    const remoteData = JSON.parse(remote.text);
+    const remoteTime = remoteData.updatedAt ? new Date(remoteData.updatedAt).getTime() : 0;
+    const localTime = state.updatedAt ? new Date(state.updatedAt).getTime() : 0;
+    if (remoteTime > localTime) {
+      state = remoteData;
+      saveLocal(state);
+      renderAll();
+      setSyncStatus('ok', 'Synced from GitHub');
+    } else if (localTime > remoteTime) {
+      await pushToGitHub('Update collection data', remote.sha);
+      setSyncStatus('ok', 'Synced to GitHub');
     } else {
-      const remoteData = JSON.parse(remote.text);
-      const remoteTime = remoteData.updatedAt ? new Date(remoteData.updatedAt).getTime() : 0;
-      const localTime = state.updatedAt ? new Date(state.updatedAt).getTime() : 0;
-      if (remoteTime > localTime) {
-        state = remoteData;
-        saveLocal(state);
-        renderAll();
-        authError = null;
-        setStatus('ok', 'synced');
-      } else if (localTime > remoteTime) {
-        await pushToGitHub('Update collection data', remote.sha);
-        authError = null;
-        setStatus('ok', 'synced');
-      } else {
-        authError = null;
-        setStatus('ok', 'synced');
-      }
+      setSyncStatus('ok', 'Synced');
     }
   } catch (e) {
-    authError = classifyError(e);
-    setStatus('dirty', authError ? 'sync error' : 'offline');
+    console.error(e);
+    setSyncStatus('err', 'Sync failed — using local data');
   }
-  updateBanner();
 }
 
 async function pushToGitHub(message, knownSha) {
   const settings = getSettings();
   if (!isConfigured(settings)) return;
-  setStatus('', 'saving…');
+  setSyncStatus('syncing', 'Syncing…');
   try {
     let sha = knownSha;
     if (!sha) {
@@ -592,13 +887,11 @@ async function pushToGitHub(message, knownSha) {
       sha = existing ? existing.sha : undefined;
     }
     await ghPutFile(settings, 'data.json', JSON.stringify(state, null, 2), message || 'Update collection data', sha);
-    authError = null;
-    setStatus('ok', 'saved');
+    setSyncStatus('ok', 'Synced');
   } catch (e) {
-    authError = classifyError(e);
-    setStatus('dirty', authError ? 'sync error' : 'save failed');
+    console.error(e);
+    setSyncStatus('err', 'Sync failed');
   }
-  updateBanner();
 }
 
 function mutateAndSync(message) {
@@ -619,8 +912,13 @@ function resizeImageFile(file, maxDim = 900, quality = 0.72) {
       img.onerror = reject;
       img.onload = () => {
         let { width, height } = img;
-        if (width > height && width > maxDim) { height = Math.round(height * (maxDim / width)); width = maxDim; }
-        else if (height > maxDim) { width = Math.round(width * (maxDim / height)); height = maxDim; }
+        if (width > height && width > maxDim) {
+          height = Math.round(height * (maxDim / width));
+          width = maxDim;
+        } else if (height > maxDim) {
+          width = Math.round(width * (maxDim / height));
+          height = maxDim;
+        }
         const canvas = document.createElement('canvas');
         canvas.width = width;
         canvas.height = height;
@@ -633,99 +931,90 @@ function resizeImageFile(file, maxDim = 900, quality = 0.72) {
   });
 }
 
-/* ---------------- helpers ---------------- */
-
-function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m])); }
+/* ---------------- rendering ---------------- */
 
 function fmtMoney(n) {
-  if (n === undefined || n === null || n === '' || isNaN(n)) return '';
+  if (n === undefined || n === null || isNaN(n)) return '';
   return '$' + Number(n).toFixed(2);
 }
 
-function subLine(item) {
-  return [item.creator, item.year].filter(Boolean).join(' · ');
+function matchesSearch(item, q) {
+  if (!q) return true;
+  q = q.toLowerCase();
+  return (item.title || '').toLowerCase().includes(q) || (item.creator || '').toLowerCase().includes(q);
 }
 
-function findItem(id) { return state.items.find(i => i.id === id); }
+function cardHtml(item) {
+  const cover = item.image
+    ? `<img src="${item.image}" alt="">`
+    : `<span class="placeholder">${item.type === 'vinyl' ? '💿' : '📖'}</span>`;
+  return `
+    <div class="card" data-id="${item.id}">
+      <div class="card-cover">
+        <span class="type-badge ${item.type}">${item.type}</span>
+        ${cover}
+      </div>
+      <div class="card-body">
+        <p class="card-title">${escapeHtml(item.title || 'Untitled')}</p>
+        <p class="card-creator">${escapeHtml(item.creator || '')}</p>
+      </div>
+    </div>`;
+}
 
-/* ---------------- rendering ---------------- */
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str == null ? '' : String(str);
+  return div.innerHTML;
+}
+
+function renderCollection() {
+  const q = document.getElementById('searchInput').value;
+  const typeFilter = document.getElementById('filterType').value;
+  const genreFilter = document.getElementById('filterGenre').value;
+
+  const items = state.items.filter(i => i.status === 'owned')
+    .filter(i => matchesSearch(i, q))
+    .filter(i => !typeFilter || i.type === typeFilter)
+    .filter(i => !genreFilter || (i.genre || '').trim() === genreFilter)
+    .sort((a, b) => (b.addedAt || '').localeCompare(a.addedAt || ''));
+
+  const grid = document.getElementById('collectionGrid');
+  grid.innerHTML = items.map(cardHtml).join('');
+  document.getElementById('collectionEmpty').hidden = items.length !== 0;
+}
+
+function renderWishlist() {
+  const q = document.getElementById('wishlistSearchInput').value;
+  const items = state.items.filter(i => i.status === 'wishlist')
+    .filter(i => matchesSearch(i, q))
+    .sort((a, b) => (b.addedAt || '').localeCompare(a.addedAt || ''));
+
+  const grid = document.getElementById('wishlistGrid');
+  grid.innerHTML = items.map(cardHtml).join('');
+  document.getElementById('wishlistEmpty').hidden = items.length !== 0;
+}
 
 function populateGenreFilter() {
-  const sel = $('#filterGenre');
+  const sel = document.getElementById('filterGenre');
   const current = sel.value;
   const genres = Array.from(new Set(
-    state.items.filter(i => i.status === 'owned' && i.genre && i.genre.trim()).map(i => i.genre.trim())
+    state.items.filter(i => i.status === 'owned' && i.genre && i.genre.trim())
+      .map(i => i.genre.trim())
   )).sort((a, b) => a.localeCompare(b));
-  sel.innerHTML = '<option value="">All genres</option>' + genres.map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join('');
+  sel.innerHTML = '<option value="">All genres</option>' + genres.map(g => `<option value="${escapeHtml(g)}">${escapeHtml(g)}</option>`).join('');
   if (genres.includes(current)) sel.value = current;
 }
 
-function rowHtml(item) {
-  const cover = item.image
-    ? `<img class="cover" src="${item.image}" alt="">`
-    : `<span class="cover-ph">${item.type === 'vinyl' ? '💿' : '📖'}</span>`;
-  return `
-    <li class="row" data-id="${item.id}">
-      ${cover}
-      <span class="typedot ${item.type}" title="${item.type === 'vinyl' ? 'Vinyl' : 'Book'}"></span>
-      <div class="meta">
-        <div class="title">${esc(item.title || 'Untitled')}</div>
-        <div class="sub">${esc(subLine(item)) || '&nbsp;'}</div>
-      </div>
-    </li>`;
-}
-
-function getListItems() {
-  const status = activeTab === 'wishlist' ? 'wishlist' : 'owned';
-  let out = state.items.filter(i => i.status === status);
-  const q = $('#q').value.trim().toLowerCase();
-  if (q) out = out.filter(i => (i.title || '').toLowerCase().includes(q) || (i.creator || '').toLowerCase().includes(q));
-  if (activeTab === 'collection') {
-    const type = $('#filterType').value;
-    const genre = $('#filterGenre').value;
-    if (type) out = out.filter(i => i.type === type);
-    if (genre) out = out.filter(i => (i.genre || '').trim() === genre);
-  }
-  return out.sort((a, b) => (b.addedAt || '').localeCompare(a.addedAt || ''));
-}
-
-function renderControls() {
-  const controls = $('#controls');
-  const typeSel = $('#filterType');
-  const genreSel = $('#filterGenre');
-  if (activeTab === 'stats') {
-    controls.hidden = true;
-  } else {
-    controls.hidden = false;
-    typeSel.style.display = activeTab === 'collection' ? '' : 'none';
-    genreSel.style.display = activeTab === 'collection' ? '' : 'none';
-    $('#q').placeholder = activeTab === 'wishlist' ? 'Search wishlist…' : 'Search title or artist/author…';
-  }
-}
-
-function renderList() {
-  const rows = getListItems();
-  const total = state.items.filter(i => i.status === (activeTab === 'wishlist' ? 'wishlist' : 'owned')).length;
-  $('#count').textContent = total ? `${rows.length}/${total}` : '';
-  if (!rows.length) {
-    const noun = activeTab === 'wishlist' ? 'wishlist item' : 'book or vinyl';
-    $('#list').innerHTML = `<div class="empty"><b>${total ? 'No matches' : 'Nothing here yet'}</b>${
-      total ? 'Try a different search or filter.' : 'Tap + to add your first ' + noun + '.'}</div>`;
-    return;
-  }
-  $('#list').innerHTML = rows.map(rowHtml).join('');
-}
-
-function barRows(counts, kind) {
+function barList(counts) {
   const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
   const max = entries.length ? entries[0][1] : 1;
-  if (!entries.length) return '<span class="stat-label">No data yet</span>';
-  return `<div class="stats-hbars">${entries.map(([label, count]) => `
-    <div class="stats-hbar-row" data-${kind}-filter="${esc(label)}" role="button" tabindex="0">
-      <span class="stats-hbar-label">${esc(label)}</span>
-      <div class="stats-hbar-track"><div class="stats-hbar-fill" style="width:${Math.round((count / max) * 100)}%"></div></div>
-      <span class="stats-hbar-n">${count}</span>
-    </div>`).join('')}</div>`;
+  if (!entries.length) return '<p class="muted">No data yet.</p>';
+  return entries.map(([label, count]) => `
+    <div class="bar-row">
+      <span class="bar-label" title="${escapeHtml(label)}">${escapeHtml(label)}</span>
+      <span class="bar-track"><span class="bar-fill" style="width:${Math.round((count / max) * 100)}%"></span></span>
+      <span class="bar-count">${count}</span>
+    </div>`).join('');
 }
 
 function renderStats() {
@@ -735,179 +1024,135 @@ function renderStats() {
   const wishlist = state.items.filter(i => i.status === 'wishlist');
   const totalSpent = owned.reduce((sum, i) => sum + (Number(i.price) || 0), 0);
 
-  const filtered = statsFilter
-    ? owned.filter(i => (statsFilter.type === 'genre' ? (i.genre || '').trim() : (i.format || 'Unspecified').trim()) === statsFilter.value)
-    : owned;
+  const cards = [
+    { num: owned.length, label: 'Total owned' },
+    { num: books.length, label: 'Books' },
+    { num: vinyls.length, label: 'Vinyls' },
+    { num: wishlist.length, label: 'Wishlist items' },
+    { num: fmtMoney(totalSpent) || '$0.00', label: 'Total spent (entered prices)' }
+  ];
+  document.getElementById('statsCards').innerHTML = cards.map(c => `
+    <div class="stat-card"><div class="num">${c.num}</div><div class="label">${c.label}</div></div>
+  `).join('');
 
   const formatCounts = {};
-  filtered.forEach(i => { const f = (i.format || 'Unspecified').trim() || 'Unspecified'; formatCounts[f] = (formatCounts[f] || 0) + 1; });
+  owned.forEach(i => {
+    const f = (i.format || 'Unspecified').trim() || 'Unspecified';
+    formatCounts[f] = (formatCounts[f] || 0) + 1;
+  });
+  document.getElementById('statsFormat').innerHTML = barList(formatCounts);
+
   const genreCounts = {};
-  filtered.forEach(i => { const g = (i.genre || 'Unspecified').trim() || 'Unspecified'; genreCounts[g] = (genreCounts[g] || 0) + 1; });
-
-  const topGenreEntry = Object.entries(genreCounts).filter(([g]) => g !== 'Unspecified').sort((a, b) => b[1] - a[1])[0];
-
-  const filterChip = statsFilter
-    ? `<div class="stats-filter-chip" data-clear-filter="1">Filtered: ${esc(statsFilter.value)} <span class="x">✕</span></div>`
-    : '';
-
-  $('#count').textContent = '';
-  $('#list').innerHTML = `
-    ${filterChip}
-    <div class="stats-grid">
-      <div class="stat-card"><div class="stat-num">${owned.length}</div><div class="stat-label">Owned</div></div>
-      <div class="stat-card"><div class="stat-num">${books.length}</div><div class="stat-label">Books</div></div>
-      <div class="stat-card"><div class="stat-num">${vinyls.length}</div><div class="stat-label">Vinyls</div></div>
-      <div class="stat-card"><div class="stat-num">${wishlist.length}</div><div class="stat-label">Wishlist</div></div>
-    </div>
-    <div class="stats-chips" style="margin-top:14px">
-      <span class="stats-chip">${fmtMoney(totalSpent) || '$0.00'} total spent</span>
-      ${topGenreEntry ? `<span class="stats-chip">${esc(topGenreEntry[0])} is your top genre</span>` : ''}
-    </div>
-    <div class="stats-section">
-      <div class="stats-h">By format — tap to filter</div>
-      ${barRows(formatCounts, 'format')}
-    </div>
-    <div class="stats-section">
-      <div class="stats-h">By genre — tap to filter</div>
-      ${barRows(genreCounts, 'genre')}
-    </div>`;
+  owned.forEach(i => {
+    const g = (i.genre || 'Unspecified').trim() || 'Unspecified';
+    genreCounts[g] = (genreCounts[g] || 0) + 1;
+  });
+  document.getElementById('statsGenre').innerHTML = barList(genreCounts);
 }
 
 function renderAll() {
   populateGenreFilter();
-  renderControls();
-  if (activeTab === 'stats') renderStats();
-  else renderList();
+  renderCollection();
+  renderWishlist();
+  renderStats();
 }
 
-/* ---------------- sheets ---------------- */
-
-function openSheet(sel) { $('#scrim').classList.add('on'); $(sel).classList.add('on'); }
-function closeSheets() { $('#scrim').classList.remove('on'); document.querySelectorAll('.sheet').forEach(s => s.classList.remove('on')); }
+/* ---------------- modal: add/edit item ---------------- */
 
 function updateFormLabels() {
-  const type = $('#f_type').value;
-  $('#f_creatorLabel span').textContent = type === 'vinyl' ? 'Artist' : 'Author';
-  $('#f_format').placeholder = type === 'vinyl' ? 'e.g. LP, 7", Cassette' : 'e.g. Hardcover, Paperback';
+  const type = document.getElementById('f_type').value;
+  document.querySelector('#f_creatorLabel').firstChild.textContent = type === 'vinyl' ? 'Artist' : 'Author';
+  document.getElementById('f_format').placeholder = type === 'vinyl' ? 'e.g. LP, 7", Cassette' : 'e.g. Hardcover, Paperback';
 }
 
-function openEdit(item, defaultStatus) {
-  editingImageData = undefined;
-  editingId = item ? item.id : null;
-  $('#coverPreview').style.display = 'none';
-  $('#delEdit').style.display = item ? 'block' : 'none';
-  $('#editTitle').textContent = item ? 'Edit' : 'Add item';
+function openItemModal(item, defaultStatus) {
+  editingImageData = undefined; // undefined = no change; null = cleared; string = new image
+  document.getElementById('itemForm').reset();
+  document.getElementById('f_imagePreview').hidden = true;
+  document.getElementById('deleteItemBtn').hidden = !item;
 
   if (item) {
-    $('#f_type').value = item.type;
-    $('#f_title').value = item.title || '';
-    $('#f_creator').value = item.creator || '';
-    $('#f_year').value = item.year || '';
-    $('#f_format').value = item.format || '';
-    $('#f_genre').value = item.genre || '';
-    $('#f_condition').value = item.condition || '';
-    $('#f_price').value = item.price ?? '';
-    $('#f_status').value = item.status || 'owned';
-    $('#f_notes').value = item.notes || '';
-    if (item.image) { $('#coverPreview').src = item.image; $('#coverPreview').style.display = 'block'; }
+    document.getElementById('modalTitle').textContent = 'Edit item';
+    document.getElementById('itemId').value = item.id;
+    document.getElementById('f_type').value = item.type;
+    document.getElementById('f_title').value = item.title || '';
+    document.getElementById('f_creator').value = item.creator || '';
+    document.getElementById('f_year').value = item.year || '';
+    document.getElementById('f_format').value = item.format || '';
+    document.getElementById('f_genre').value = item.genre || '';
+    document.getElementById('f_condition').value = item.condition || '';
+    document.getElementById('f_price').value = item.price ?? '';
+    document.getElementById('f_status').value = item.status || 'owned';
+    document.getElementById('f_notes').value = item.notes || '';
+    if (item.image) {
+      document.getElementById('f_imagePreview').src = item.image;
+      document.getElementById('f_imagePreview').hidden = false;
+    }
   } else {
-    $('#f_type').value = 'book';
-    $('#f_title').value = '';
-    $('#f_creator').value = '';
-    $('#f_year').value = '';
-    $('#f_format').value = '';
-    $('#f_genre').value = '';
-    $('#f_condition').value = '';
-    $('#f_price').value = '';
-    $('#f_status').value = defaultStatus || 'owned';
-    $('#f_notes').value = '';
+    document.getElementById('modalTitle').textContent = 'Add item';
+    document.getElementById('itemId').value = '';
+    document.getElementById('f_status').value = defaultStatus || 'owned';
   }
   updateFormLabels();
-  openSheet('#editSheet');
+  document.getElementById('modalBackdrop').hidden = false;
 }
 
-function saveEdit() {
-  const title = $('#f_title').value.trim();
-  if (!title) { toast('A title is required'); return; }
-  const fields = {
-    type: $('#f_type').value,
-    title,
-    creator: $('#f_creator').value.trim(),
-    year: $('#f_year').value.trim(),
-    format: $('#f_format').value.trim(),
-    genre: $('#f_genre').value.trim(),
-    condition: $('#f_condition').value,
-    price: $('#f_price').value === '' ? undefined : Number($('#f_price').value),
-    status: $('#f_status').value,
-    notes: $('#f_notes').value.trim()
-  };
-  if (editingId) {
-    const item = findItem(editingId);
-    Object.assign(item, fields);
-    if (editingImageData !== undefined) item.image = editingImageData;
-    mutateAndSync(`Update "${title}"`);
-    toast('Saved');
-  } else {
-    const newItem = {
-      id: (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2)),
-      addedAt: new Date().toISOString(),
-      image: editingImageData || null,
-      ...fields
-    };
-    state.items.unshift(newItem);
-    mutateAndSync(`Add "${title}"`);
-    toast('Added');
-  }
-  closeSheets();
+function closeItemModal() {
+  document.getElementById('modalBackdrop').hidden = true;
 }
 
-function delEdit() {
-  if (!editingId) return;
-  const item = findItem(editingId);
+function findItem(id) {
+  return state.items.find(i => i.id === id);
+}
+
+/* ---------------- detail modal ---------------- */
+
+function openDetailModal(id) {
+  const item = findItem(id);
   if (!item) return;
-  if (!confirm(`Delete "${item.title}"? This cannot be undone.`)) return;
-  state.items = state.items.filter(i => i.id !== editingId);
-  mutateAndSync(`Delete "${item.title}"`);
-  closeSheets();
-  toast('Deleted');
+  currentDetailId = id;
+  const rows = [
+    ['Type', item.type === 'vinyl' ? 'Vinyl' : 'Book'],
+    [item.type === 'vinyl' ? 'Artist' : 'Author', item.creator],
+    ['Year', item.year],
+    ['Format', item.format],
+    ['Genre', item.genre],
+    ['Condition', item.condition],
+    ['Price paid', item.price !== undefined && item.price !== '' ? fmtMoney(item.price) : ''],
+    ['Status', item.status === 'wishlist' ? 'Wishlist' : 'Owned'],
+    ['Notes', item.notes]
+  ].filter(([, v]) => v);
+
+  const cover = item.image
+    ? `<img class="detail-cover" src="${item.image}" alt="">`
+    : '';
+
+  document.getElementById('detailContent').innerHTML = `
+    ${cover}
+    <h3>${escapeHtml(item.title || 'Untitled')}</h3>
+    ${rows.map(([k, v]) => `<div class="detail-row"><span>${k}</span><span>${escapeHtml(v)}</span></div>`).join('')}
+    <div class="detail-actions">
+      <button class="btn primary" id="detailEditBtn">Edit</button>
+      <button class="btn danger" id="detailDeleteBtn">Delete</button>
+    </div>
+  `;
+  document.getElementById('detailEditBtn').addEventListener('click', () => {
+    closeDetailModal();
+    openItemModal(item);
+  });
+  document.getElementById('detailDeleteBtn').addEventListener('click', () => {
+    if (confirm(`Delete "${item.title}"? This cannot be undone.`)) {
+      state.items = state.items.filter(i => i.id !== item.id);
+      mutateAndSync(`Delete "${item.title}"`);
+      closeDetailModal();
+    }
+  });
+  document.getElementById('detailBackdrop').hidden = false;
 }
 
-function openSet() {
-  const s = getSettings() || {};
-  $('#repoIn').value = (s.owner && s.repo) ? `${s.owner}/${s.repo}` : '';
-  $('#branchIn').value = s.branch || 'main';
-  $('#tokIn').value = s.token || '';
-  $('#connHint').style.display = 'none';
-  openSheet('#setSheet');
-}
-
-function readRepoField() {
-  const raw = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//, '').replace(/\/$/, '');
-  const parts = raw.split('/').filter(Boolean);
-  return { owner: parts[0] || '', repo: parts[1] || '' };
-}
-
-async function testConnection() {
-  const { owner, repo } = readRepoField();
-  const branch = $('#branchIn').value.trim() || 'main';
-  const token = $('#tokIn').value.trim();
-  const hint = $('#connHint');
-  hint.style.display = 'block';
-  hint.className = 'note';
-  hint.textContent = 'Checking…';
-  if (!owner || !repo || !token) {
-    hint.className = 'note warn';
-    hint.textContent = 'Enter a repo (owner/repo) and token first.';
-    return;
-  }
-  try {
-    const info = await ghTestConnection({ owner, repo, branch, token });
-    hint.className = 'note ok';
-    hint.textContent = `✓ Connected to ${info.full_name}${info.private ? ' (private)' : ' (public)'}, write access confirmed.`;
-  } catch (e) {
-    hint.className = 'note warn';
-    hint.textContent = e.message;
-  }
+function closeDetailModal() {
+  document.getElementById('detailBackdrop').hidden = true;
+  currentDetailId = null;
 }
 
 /* ---------------- export / import ---------------- */
@@ -940,95 +1185,166 @@ function importData(file) {
   reader.readAsText(file);
 }
 
-/* ---------------- events ---------------- */
+/* ---------------- wiring ---------------- */
 
 function wireTabs() {
-  $('#tabs').addEventListener('click', (e) => {
-    const b = e.target.closest('.tab');
-    if (!b) return;
-    document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', 'false'));
-    b.setAttribute('aria-selected', 'true');
-    activeTab = b.dataset.k;
-    statsFilter = null;
-    renderAll();
-    window.scrollTo({ top: 0 });
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+      if (btn.dataset.tab === 'stats') renderStats();
+    });
   });
 }
 
-function wireControls() {
-  $('#q').addEventListener('input', () => { if (activeTab !== 'stats') renderList(); });
-  $('#filterType').addEventListener('change', renderList);
-  $('#filterGenre').addEventListener('change', renderList);
-}
-
-function wireList() {
-  $('#list').addEventListener('click', (e) => {
-    const clearF = e.target.closest('[data-clear-filter]');
-    if (clearF) { statsFilter = null; renderStats(); return; }
-    const gf = e.target.closest('[data-genre-filter]');
-    if (gf) { statsFilter = { type: 'genre', value: gf.dataset.genreFilter }; renderStats(); return; }
-    const ff = e.target.closest('[data-format-filter]');
-    if (ff) { statsFilter = { type: 'format', value: ff.dataset.formatFilter }; renderStats(); return; }
-    const row = e.target.closest('.row');
-    if (row) openEdit(findItem(row.dataset.id));
+function wireCollection() {
+  document.getElementById('searchInput').addEventListener('input', renderCollection);
+  document.getElementById('filterType').addEventListener('change', renderCollection);
+  document.getElementById('filterGenre').addEventListener('change', renderCollection);
+  document.getElementById('addItemBtn').addEventListener('click', () => openItemModal(null, 'owned'));
+  document.getElementById('collectionGrid').addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    if (card) openDetailModal(card.dataset.id);
   });
 }
 
-function wireFabs() {
-  $('#addBtn').addEventListener('click', () => openEdit(null, activeTab === 'wishlist' ? 'wishlist' : 'owned'));
-  $('#settingsBtn').addEventListener('click', openSet);
-  $('#reloadFab').addEventListener('click', () => { toast('Reloading…'); syncOnLoad(); });
+function wireWishlist() {
+  document.getElementById('wishlistSearchInput').addEventListener('input', renderWishlist);
+  document.getElementById('addWishBtn').addEventListener('click', () => openItemModal(null, 'wishlist'));
+  document.getElementById('wishlistGrid').addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    if (card) openDetailModal(card.dataset.id);
+  });
 }
 
-function wireEditSheet() {
-  $('#f_type').addEventListener('change', updateFormLabels);
-  $('#cancelEdit').addEventListener('click', closeSheets);
-  $('#saveEdit').addEventListener('click', saveEdit);
-  $('#delEdit').addEventListener('click', delEdit);
-  $('#choosePhotoBtn').addEventListener('click', () => $('#f_image').click());
-  $('#f_image').addEventListener('change', async (e) => {
+function wireModal() {
+  document.getElementById('f_type').addEventListener('change', updateFormLabels);
+  document.getElementById('cancelModalBtn').addEventListener('click', closeItemModal);
+  document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+    if (e.target.id === 'modalBackdrop') closeItemModal();
+  });
+
+  document.getElementById('f_image').addEventListener('change', async (e) => {
     const file = e.target.files[0];
     if (!file) return;
     const dataUrl = await resizeImageFile(file);
     editingImageData = dataUrl;
-    $('#coverPreview').src = dataUrl;
-    $('#coverPreview').style.display = 'block';
+    const preview = document.getElementById('f_imagePreview');
+    preview.src = dataUrl;
+    preview.hidden = false;
+  });
+
+  document.getElementById('deleteItemBtn').addEventListener('click', () => {
+    const id = document.getElementById('itemId').value;
+    const item = findItem(id);
+    if (item && confirm(`Delete "${item.title}"? This cannot be undone.`)) {
+      state.items = state.items.filter(i => i.id !== id);
+      mutateAndSync(`Delete "${item.title}"`);
+      closeItemModal();
+    }
+  });
+
+  document.getElementById('itemForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const id = document.getElementById('itemId').value;
+    const title = document.getElementById('f_title').value.trim();
+    if (!title) return;
+
+    const fields = {
+      type: document.getElementById('f_type').value,
+      title,
+      creator: document.getElementById('f_creator').value.trim(),
+      year: document.getElementById('f_year').value.trim(),
+      format: document.getElementById('f_format').value.trim(),
+      genre: document.getElementById('f_genre').value.trim(),
+      condition: document.getElementById('f_condition').value,
+      price: document.getElementById('f_price').value === '' ? undefined : Number(document.getElementById('f_price').value),
+      status: document.getElementById('f_status').value,
+      notes: document.getElementById('f_notes').value.trim()
+    };
+
+    if (id) {
+      const item = findItem(id);
+      Object.assign(item, fields);
+      if (editingImageData !== undefined) item.image = editingImageData;
+      mutateAndSync(`Update "${title}"`);
+    } else {
+      const newItem = {
+        id: (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2)),
+        addedAt: new Date().toISOString(),
+        image: editingImageData || null,
+        ...fields
+      };
+      state.items.unshift(newItem);
+      mutateAndSync(`Add "${title}"`);
+    }
+    closeItemModal();
   });
 }
 
-function wireSettingsSheet() {
-  $('#bFix').addEventListener('click', openSet);
-  $('#closeSet').addEventListener('click', closeSheets);
-  $('#testConnBtn').addEventListener('click', testConnection);
-  $('#saveSet').addEventListener('click', async () => {
-    const { owner, repo } = readRepoField();
-    const branch = $('#branchIn').value.trim() || 'main';
-    const token = $('#tokIn').value.trim();
-    if (!owner || !repo || !token) {
-      $('#connHint').style.display = 'block';
-      $('#connHint').className = 'note warn';
-      $('#connHint').textContent = 'Please enter a repo (owner/repo) and token.';
+function wireDetail() {
+  document.getElementById('closeDetailBtn').addEventListener('click', closeDetailModal);
+  document.getElementById('detailBackdrop').addEventListener('click', (e) => {
+    if (e.target.id === 'detailBackdrop') closeDetailModal();
+  });
+}
+
+function wireSettings() {
+  const s = getSettings();
+  if (s) {
+    document.getElementById('ghOwner').value = s.owner || '';
+    document.getElementById('ghRepo').value = s.repo || '';
+    document.getElementById('ghBranch').value = s.branch || 'main';
+    document.getElementById('ghToken').value = s.token || '';
+  }
+
+  function readFields() {
+    return {
+      owner: document.getElementById('ghOwner').value.trim(),
+      repo: document.getElementById('ghRepo').value.trim(),
+      branch: document.getElementById('ghBranch').value.trim() || 'main',
+      token: document.getElementById('ghToken').value.trim()
+    };
+  }
+
+  document.getElementById('testConnBtn').addEventListener('click', async () => {
+    const hint = document.getElementById('connHint');
+    hint.textContent = 'Testing…';
+    try {
+      const info = await ghTestConnection(readFields());
+      hint.textContent = `✓ Connected to ${info.full_name}${info.private ? ' (private)' : ' (public)'}`;
+    } catch (e) {
+      hint.textContent = '✗ ' + e.message;
+    }
+  });
+
+  document.getElementById('saveConnBtn').addEventListener('click', async () => {
+    const fields = readFields();
+    if (!fields.owner || !fields.repo || !fields.token) {
+      document.getElementById('connHint').textContent = 'Please fill in username, repo, and token.';
       return;
     }
-    saveSettings({ owner, repo, branch, token });
-    authError = null;
-    toast('Settings saved');
-    closeSheets();
+    saveSettings(fields);
+    document.getElementById('connHint').textContent = 'Saved. Syncing…';
     await syncOnLoad();
+    document.getElementById('connHint').textContent = 'Connected.';
   });
-  $('#forgetBtn').addEventListener('click', () => {
-    const s = getSettings();
-    if (s) { s.token = ''; saveSettings(s); }
-    $('#tokIn').value = '';
-    authError = null;
-    toast('Token removed from this browser');
-    updateBanner();
-  });
-  $('#scrim').addEventListener('click', closeSheets);
 
-  $('#exportBtn').addEventListener('click', exportData);
-  $('#importBtn').addEventListener('click', () => $('#importFile').click());
-  $('#importFile').addEventListener('change', (e) => {
+  document.getElementById('disconnectBtn').addEventListener('click', () => {
+    clearSettings();
+    document.getElementById('ghOwner').value = '';
+    document.getElementById('ghRepo').value = '';
+    document.getElementById('ghBranch').value = 'main';
+    document.getElementById('ghToken').value = '';
+    document.getElementById('connHint').textContent = 'Disconnected. Data stays local on this device.';
+    setSyncStatus('', 'Local only');
+  });
+
+  document.getElementById('exportBtn').addEventListener('click', exportData);
+  document.getElementById('importBtn').addEventListener('click', () => document.getElementById('importFile').click());
+  document.getElementById('importFile').addEventListener('change', (e) => {
     const file = e.target.files[0];
     if (file) importData(file);
     e.target.value = '';
@@ -1038,22 +1354,20 @@ function wireSettingsSheet() {
 /* ---------------- init ---------------- */
 
 function init() {
-  $('#versionTag').textContent = VERSION;
-  $('#verLabel').textContent = VERSION;
+  document.getElementById('versionTag').textContent = VERSION;
   state = loadLocal();
   wireTabs();
-  wireControls();
-  wireList();
-  wireFabs();
-  wireEditSheet();
-  wireSettingsSheet();
+  wireCollection();
+  wireWishlist();
+  wireModal();
+  wireDetail();
+  wireSettings();
   renderAll();
-  updateBanner();
   syncOnLoad();
 
-  // A previous version of this app registered a service worker for offline caching.
-  // That cache could get "stuck" serving old files after an update, which is worse than
-  // just not having offline support. Actively unregister it so everyone gets fresh files.
+  // A previous version registered a service worker for offline caching, which could get
+  // "stuck" serving stale files after an update. Actively unregister any leftover one so
+  // everyone gets fresh files instead.
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister())).catch(() => {});
     if (window.caches) caches.keys().then(names => names.forEach(n => caches.delete(n))).catch(() => {});
