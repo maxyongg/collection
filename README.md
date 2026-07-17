@@ -39,7 +39,13 @@ A couple of things worth knowing:
 - If you ever edit the collection on two devices while both are offline at the same time, the version with the most recent change wins when they next sync — there's no merge, just newest-wins.
 - Use the "Export JSON" button in Settings any time you want a manual backup file.
 
-## 3. Send me your existing list
+## Sharing your collection with others (view-only)
+
+Once it's on GitHub Pages, you can just send people the link (`https://yourusername.github.io/my-collection/`). Whoever opens it sees your collection immediately — the app reads `data.json` straight from your public repo, no setup needed on their end.
+
+They can't actually change your collection: the ⚙ Settings token field is how *you* grant *your own browser* permission to save changes back to your repo. Without your token, nothing they do (adding, editing, deleting) ever gets uploaded anywhere — it only exists in their own browser, and disappears if they clear their browser data or open the link elsewhere. Your real data.json on GitHub is untouched unless someone has your actual token.
+
+## Send me your existing list
 
 If you already have a list of books/vinyls (spreadsheet, notes app, whatever), paste or attach it in chat and I'll turn it into the starting `data.json` for you.
 

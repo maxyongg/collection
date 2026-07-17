@@ -358,7 +358,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
    Storage: localStorage is always the fast local copy. If GitHub sync is configured,
    the same data.json is read/written in the user's repo so multiple devices stay in sync. */
 
-const VERSION = 'v1.3';
+const VERSION = 'v1.4';
 const STORAGE_KEY = 'shelfsleeve_data_v1';
 const SETTINGS_KEY = 'shelfsleeve_settings_v1';
 const $ = (s) => document.querySelector(s);
@@ -520,7 +520,34 @@ function toast(msg) {
 
 async function syncOnLoad() {
   const settings = getSettings();
-  if (!isConfigured(settings)) { setStatus('', 'local'); updateBanner(); return; }
+  if (!isConfigured(settings)) {
+    // No token in this browser — most likely someone viewing a shared link, or a
+    // fresh device of mine. Load the public data.json sitting next to this page
+    // (works with a plain, unauthenticated fetch on GitHub Pages) so the collection
+    // is pre-populated on launch instead of starting empty. There is no write path
+    // here, so anything a visitor adds/edits only lives in their own browser.
+    setStatus('', 'loading…');
+    try {
+      const res = await fetch('./data.json?t=' + Date.now(), { cache: 'no-store' });
+      if (res.ok) {
+        const remoteData = await res.json();
+        const remoteTime = remoteData.updatedAt ? new Date(remoteData.updatedAt).getTime() : 0;
+        const localTime = state.updatedAt ? new Date(state.updatedAt).getTime() : 0;
+        if (remoteTime > localTime) {
+          state = remoteData;
+          saveLocal(state);
+          renderAll();
+        }
+        setStatus('', 'viewing');
+      } else {
+        setStatus('', 'local');
+      }
+    } catch (e) {
+      setStatus('', 'local');
+    }
+    updateBanner();
+    return;
+  }
   setStatus('', 'syncing…');
   try {
     const remote = await ghGetFile(settings, 'data.json');
