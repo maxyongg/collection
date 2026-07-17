@@ -112,6 +112,13 @@ function setSyncStatus(kind, text) {
   const label = document.getElementById('syncText');
   dot.className = 'dot' + (kind ? ' ' + kind : '');
   label.textContent = text;
+  updateBanner();
+}
+
+function updateBanner() {
+  const banner = document.getElementById('ghBanner');
+  if (!banner) return;
+  banner.hidden = isConfigured(getSettings());
 }
 
 function toast(msg) {
@@ -330,6 +337,13 @@ function renderStats() {
     genreCounts[g] = (genreCounts[g] || 0) + 1;
   });
   document.getElementById('statsGenre').innerHTML = barList(genreCounts);
+
+  const badges = [];
+  badges.push(`<span class="badge-pill">${owned.length} owned</span>`);
+  if (wishlist.length) badges.push(`<span class="badge-pill">${wishlist.length} on wishlist</span>`);
+  const topGenre = Object.entries(genreCounts).filter(([g]) => g !== 'Unspecified').sort((a, b) => b[1] - a[1])[0];
+  if (topGenre) badges.push(`<span class="badge-pill">${escapeHtml(topGenre[0])} is your top genre</span>`);
+  document.getElementById('statsBadges').innerHTML = badges.join('');
 }
 
 function renderAll() {
@@ -469,6 +483,8 @@ function importData(file) {
 
 /* ---------------- wiring ---------------- */
 
+let activeTabName = 'collection';
+
 function wireTabs() {
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -476,8 +492,21 @@ function wireTabs() {
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+      activeTabName = btn.dataset.tab;
       if (btn.dataset.tab === 'stats') renderStats();
     });
+  });
+}
+
+function wireFab() {
+  document.getElementById('fabAdd').addEventListener('click', () => {
+    openItemModal(null, activeTabName === 'wishlist' ? 'wishlist' : 'owned');
+  });
+  document.getElementById('fabSettings').addEventListener('click', () => {
+    document.querySelector('.tab-btn[data-tab="settings"]').click();
+  });
+  document.getElementById('bannerSetupBtn').addEventListener('click', () => {
+    document.querySelector('.tab-btn[data-tab="settings"]').click();
   });
 }
 
@@ -485,7 +514,6 @@ function wireCollection() {
   document.getElementById('searchInput').addEventListener('input', renderCollection);
   document.getElementById('filterType').addEventListener('change', renderCollection);
   document.getElementById('filterGenre').addEventListener('change', renderCollection);
-  document.getElementById('addItemBtn').addEventListener('click', () => openItemModal(null, 'owned'));
   document.getElementById('collectionGrid').addEventListener('click', (e) => {
     const card = e.target.closest('.card');
     if (card) openDetailModal(card.dataset.id);
@@ -494,7 +522,6 @@ function wireCollection() {
 
 function wireWishlist() {
   document.getElementById('wishlistSearchInput').addEventListener('input', renderWishlist);
-  document.getElementById('addWishBtn').addEventListener('click', () => openItemModal(null, 'wishlist'));
   document.getElementById('wishlistGrid').addEventListener('click', (e) => {
     const card = e.target.closest('.card');
     if (card) openDetailModal(card.dataset.id);
@@ -638,12 +665,14 @@ function wireSettings() {
 function init() {
   state = loadLocal();
   wireTabs();
+  wireFab();
   wireCollection();
   wireWishlist();
   wireModal();
   wireDetail();
   wireSettings();
   renderAll();
+  updateBanner();
   syncOnLoad();
 
   // A previous version of this app registered a service worker for offline caching.

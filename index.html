@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shelf & Sleeve — Book & Vinyl Collection</title>
-<meta name="theme-color" content="#1b1b1f">
+<meta name="theme-color" content="#f4f1ec">
 <link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,12 +17,11 @@
 
 <header class="topbar">
   <div class="brand">
-    <span class="brand-mark">◐</span>
-    <span class="brand-name">Shelf &amp; Sleeve</span>
+    <span class="brand-name">SHELF<em>&amp;</em>SLEEVE</span>
+    <span class="brand-sub" id="syncText">local</span>
   </div>
   <div class="sync-status" id="syncStatus">
     <span class="dot" id="syncDot"></span>
-    <span id="syncText">Local only</span>
   </div>
 </header>
 
@@ -31,6 +33,14 @@
 </nav>
 
 <main>
+
+  <div class="banner" id="ghBanner" hidden>
+    <div class="banner-text">
+      <strong>Not connected to GitHub</strong>
+      <span class="muted">Edits save on this device only. Add a token to sync.</span>
+    </div>
+    <button class="btn primary" id="bannerSetupBtn">Set up</button>
+  </div>
 
   <!-- COLLECTION TAB -->
   <section class="tab-panel active" id="panel-collection">
@@ -44,24 +54,23 @@
       <select id="filterGenre">
         <option value="">All genres</option>
       </select>
-      <button class="btn primary" id="addItemBtn">+ Add item</button>
     </div>
     <div class="grid" id="collectionGrid"></div>
-    <p class="empty-state" id="collectionEmpty" hidden>Nothing here yet. Add your first book or vinyl above.</p>
+    <p class="empty-state" id="collectionEmpty" hidden>Nothing here yet. Tap + to add your first book or vinyl.</p>
   </section>
 
   <!-- WISHLIST TAB -->
   <section class="tab-panel" id="panel-wishlist">
     <div class="toolbar">
       <input type="search" id="wishlistSearchInput" placeholder="Search wishlist…">
-      <button class="btn primary" id="addWishBtn">+ Add to wishlist</button>
     </div>
     <div class="grid" id="wishlistGrid"></div>
-    <p class="empty-state" id="wishlistEmpty" hidden>Your wishlist is empty.</p>
+    <p class="empty-state" id="wishlistEmpty" hidden>Your wishlist is empty. Tap + to add something you want.</p>
   </section>
 
   <!-- STATS TAB -->
   <section class="tab-panel" id="panel-stats">
+    <div class="badge-row" id="statsBadges"></div>
     <div class="stats-cards" id="statsCards"></div>
     <div class="stats-breakdown">
       <div class="stats-block">
@@ -112,6 +121,11 @@
   </section>
 
 </main>
+
+<div class="fab-stack">
+  <button class="fab fab-sm" id="fabSettings" title="Settings" aria-label="Settings">⚙</button>
+  <button class="fab fab-lg" id="fabAdd" title="Add item" aria-label="Add item">+</button>
+</div>
 
 <!-- ADD/EDIT ITEM MODAL -->
 <div class="modal-backdrop" id="modalBackdrop" hidden>
@@ -196,6 +210,8 @@
     <div id="detailContent"></div>
   </div>
 </div>
+
+<div class="version-tag">v1.0</div>
 
 <script src="app.js"></script>
 </body>
