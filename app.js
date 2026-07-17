@@ -646,8 +646,16 @@ function init() {
   renderAll();
   syncOnLoad();
 
+  // A previous version of this app registered a service worker for offline caching.
+  // That cache could get "stuck" serving old files after an update, which is worse than
+  // just not having offline support. Actively unregister it so everyone gets fresh files.
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.getRegistrations().then(regs => {
+      regs.forEach(reg => reg.unregister());
+    }).catch(() => {});
+    if (window.caches) {
+      caches.keys().then(names => names.forEach(n => caches.delete(n))).catch(() => {});
+    }
   }
 }
 

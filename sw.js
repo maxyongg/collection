@@ -1,29 +1,21 @@
-// Minimal app-shell cache so the interface still loads offline.
-// Data itself always comes from localStorage / GitHub, never from this cache.
-const CACHE_NAME = 'shelfsleeve-shell-v1';
-const SHELL_FILES = ['./index.html', './styles.css', './app.js', './manifest.json'];
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL_FILES))
-  );
+// This service worker previously cached the app shell, but a stale cache could get
+// "stuck" and keep serving old files forever after an update. That's a worse experience
+// than no offline support, so this version self-destructs: it clears all caches,
+// unregisters itself, and tells every open tab to reload once with a clean slate.
+self.addEventListener('install', () => {
   self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
-    )
+    (async () => {
+      const names = await caches.keys();
+      await Promise.all(names.map((n) => caches.delete(n)));
+      await self.registration.unregister();
+      const clientsList = await self.clients.matchAll({ type: 'window' });
+      clientsList.forEach((client) => client.navigate(client.url));
+    })()
   );
-  self.clients.claim();
 });
 
-self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
-  // Only handle same-origin shell files; let everything else (GitHub API, etc.) go to the network.
-  if (url.origin !== self.location.origin) return;
-  event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
-  );
-});
+// No fetch handler: everything passes straight through to the network.
