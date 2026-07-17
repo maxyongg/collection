@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shelf & Sleeve — Book & Vinyl Collection</title>
+<meta name="theme-color" content="#1b1b1f">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="toast" class="toast" hidden></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">◐</span>
+    <span class="brand-name">Shelf &amp; Sleeve</span>
+  </div>
+  <div class="sync-status" id="syncStatus">
+    <span class="dot" id="syncDot"></span>
+    <span id="syncText">Local only</span>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab-btn active" data-tab="collection">Collection</button>
+  <button class="tab-btn" data-tab="wishlist">Wishlist</button>
+  <button class="tab-btn" data-tab="stats">Stats</button>
+  <button class="tab-btn" data-tab="settings">Settings</button>
+</nav>
+
+<main>
+
+  <!-- COLLECTION TAB -->
+  <section class="tab-panel active" id="panel-collection">
+    <div class="toolbar">
+      <input type="search" id="searchInput" placeholder="Search title or artist/author…">
+      <select id="filterType">
+        <option value="">All types</option>
+        <option value="book">Books</option>
+        <option value="vinyl">Vinyls</option>
+      </select>
+      <select id="filterGenre">
+        <option value="">All genres</option>
+      </select>
+      <button class="btn primary" id="addItemBtn">+ Add item</button>
+    </div>
+    <div class="grid" id="collectionGrid"></div>
+    <p class="empty-state" id="collectionEmpty" hidden>Nothing here yet. Add your first book or vinyl above.</p>
+  </section>
+
+  <!-- WISHLIST TAB -->
+  <section class="tab-panel" id="panel-wishlist">
+    <div class="toolbar">
+      <input type="search" id="wishlistSearchInput" placeholder="Search wishlist…">
+      <button class="btn primary" id="addWishBtn">+ Add to wishlist</button>
+    </div>
+    <div class="grid" id="wishlistGrid"></div>
+    <p class="empty-state" id="wishlistEmpty" hidden>Your wishlist is empty.</p>
+  </section>
+
+  <!-- STATS TAB -->
+  <section class="tab-panel" id="panel-stats">
+    <div class="stats-cards" id="statsCards"></div>
+    <div class="stats-breakdown">
+      <div class="stats-block">
+        <h3>By format</h3>
+        <div id="statsFormat" class="bar-list"></div>
+      </div>
+      <div class="stats-block">
+        <h3>By genre</h3>
+        <div id="statsGenre" class="bar-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTINGS TAB -->
+  <section class="tab-panel" id="panel-settings">
+    <div class="settings-card">
+      <h3>GitHub sync</h3>
+      <p class="muted">Connect a GitHub repo so your collection syncs between devices (e.g. this computer and your phone). Data is stored as a JSON file in your repo. Leave disconnected to keep everything only on this device.</p>
+      <label>GitHub username / org
+        <input type="text" id="ghOwner" placeholder="e.g. maxyong">
+      </label>
+      <label>Repository name
+        <input type="text" id="ghRepo" placeholder="e.g. my-collection">
+      </label>
+      <label>Branch
+        <input type="text" id="ghBranch" placeholder="main" value="main">
+      </label>
+      <label>Personal access token
+        <input type="password" id="ghToken" placeholder="fine-grained token, Contents: read & write">
+      </label>
+      <div class="settings-actions">
+        <button class="btn" id="testConnBtn">Test connection</button>
+        <button class="btn primary" id="saveConnBtn">Save &amp; connect</button>
+        <button class="btn danger" id="disconnectBtn">Disconnect</button>
+      </div>
+      <p class="hint" id="connHint"></p>
+    </div>
+
+    <div class="settings-card">
+      <h3>Backup</h3>
+      <p class="muted">Export your full collection as a JSON file, or import a previously exported file.</p>
+      <div class="settings-actions">
+        <button class="btn" id="exportBtn">Export JSON</button>
+        <button class="btn" id="importBtn">Import JSON</button>
+        <input type="file" id="importFile" accept="application/json" hidden>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ADD/EDIT ITEM MODAL -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <form class="modal" id="itemForm">
+    <h3 id="modalTitle">Add item</h3>
+    <input type="hidden" id="itemId">
+
+    <label>Type
+      <select id="f_type">
+        <option value="book">Book</option>
+        <option value="vinyl">Vinyl</option>
+      </select>
+    </label>
+
+    <label>Title *
+      <input type="text" id="f_title" required>
+    </label>
+
+    <label id="f_creatorLabel">Author
+      <input type="text" id="f_creator">
+    </label>
+
+    <div class="form-row">
+      <label>Year
+        <input type="text" id="f_year" inputmode="numeric" placeholder="e.g. 1998">
+      </label>
+      <label id="f_formatLabel">Format
+        <input type="text" id="f_format" placeholder="e.g. Hardcover">
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>Genre
+        <input type="text" id="f_genre" placeholder="e.g. Sci-Fi, Jazz">
+      </label>
+      <label>Condition
+        <select id="f_condition">
+          <option value="">—</option>
+          <option>New</option>
+          <option>Like New</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>Price paid
+        <input type="number" id="f_price" step="0.01" min="0" placeholder="0.00">
+      </label>
+      <label>Status
+        <select id="f_status">
+          <option value="owned">Owned</option>
+          <option value="wishlist">Wishlist</option>
+        </select>
+      </label>
+    </div>
+
+    <label>Notes
+      <textarea id="f_notes" rows="2" placeholder="Edition, signed copy, condition notes…"></textarea>
+    </label>
+
+    <label>Cover photo
+      <input type="file" id="f_image" accept="image/*">
+    </label>
+    <img id="f_imagePreview" class="image-preview" hidden>
+
+    <div class="modal-actions">
+      <button type="button" class="btn danger" id="deleteItemBtn" hidden>Delete</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" id="cancelModalBtn">Cancel</button>
+      <button type="submit" class="btn primary">Save</button>
+    </div>
+  </form>
+</div>
+
+<!-- ITEM DETAIL MODAL -->
+<div class="modal-backdrop" id="detailBackdrop" hidden>
+  <div class="modal detail-modal" id="detailModal">
+    <button class="close-x" id="closeDetailBtn">&times;</button>
+    <div id="detailContent"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
