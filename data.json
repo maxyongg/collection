@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T07:50:33.793Z",
+  "updatedAt": "2026-07-20T07:50:39.345Z",
   "items": [
     {
       "id": "f0e203a1-7196-4589-bd4b-20a314a6a8d2",
@@ -1574,21 +1574,6 @@
       "status": "owned",
       "notes": "",
       "image": "https://covers.openlibrary.org/b/id/866876-L.jpg",
-      "addedAt": "2026-07-20T07:29:47.826962Z"
-    },
-    {
-      "id": "026f1ad3-e778-4f0a-bb7c-f23a823d1f1b",
-      "type": "book",
-      "title": "The Art of the Surreal",
-      "creator": "Christie's",
-      "year": "",
-      "genre": "Art & Design",
-      "format": "",
-      "condition": "",
-      "price": null,
-      "status": "owned",
-      "notes": "",
-      "image": null,
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
