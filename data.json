@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T07:47:30.736Z",
+  "updatedAt": "2026-07-20T07:50:28.604Z",
   "items": [
     {
       "id": "f0e203a1-7196-4589-bd4b-20a314a6a8d2",
@@ -1574,21 +1574,6 @@
       "status": "owned",
       "notes": "",
       "image": "https://covers.openlibrary.org/b/id/866876-L.jpg",
-      "addedAt": "2026-07-20T07:29:47.826962Z"
-    },
-    {
-      "id": "511b679a-6557-4f29-8661-e2dc74291277",
-      "type": "book",
-      "title": "Opera Gallery, April 2022",
-      "creator": "Fernando Botero",
-      "year": "",
-      "genre": "Art & Design",
-      "format": "",
-      "condition": "",
-      "price": null,
-      "status": "owned",
-      "notes": "title inferred from listing",
-      "image": null,
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
