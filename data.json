@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T07:50:39.345Z",
+  "updatedAt": "2026-07-20T07:50:44.629Z",
   "items": [
     {
       "id": "f0e203a1-7196-4589-bd4b-20a314a6a8d2",
@@ -1574,21 +1574,6 @@
       "status": "owned",
       "notes": "",
       "image": "https://covers.openlibrary.org/b/id/866876-L.jpg",
-      "addedAt": "2026-07-20T07:29:47.826962Z"
-    },
-    {
-      "id": "a7a3d2b0-ca3e-4317-8882-888f662c64d7",
-      "type": "book",
-      "title": "Correspondences",
-      "creator": "",
-      "year": "",
-      "genre": "Art & Design",
-      "format": "",
-      "condition": "",
-      "price": null,
-      "status": "owned",
-      "notes": "",
-      "image": null,
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
