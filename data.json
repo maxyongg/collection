@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T07:50:44.629Z",
+  "updatedAt": "2026-07-20T07:50:51.295Z",
   "items": [
     {
       "id": "f0e203a1-7196-4589-bd4b-20a314a6a8d2",
@@ -1709,21 +1709,6 @@
       "status": "owned",
       "notes": "",
       "image": "https://covers.openlibrary.org/b/id/10406788-L.jpg",
-      "addedAt": "2026-07-20T07:29:47.826962Z"
-    },
-    {
-      "id": "d1ee02bf-0092-4d0c-881a-1ef12db25d27",
-      "type": "book",
-      "title": "Running: Birds Fly, Fish Swim, Humans Run",
-      "creator": "",
-      "year": "",
-      "genre": "Illustrated/Gift",
-      "format": "",
-      "condition": "",
-      "price": null,
-      "status": "owned",
-      "notes": "Korean",
-      "image": null,
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
