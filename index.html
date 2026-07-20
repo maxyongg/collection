@@ -384,7 +384,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
    Storage: localStorage is always the fast local copy. If GitHub sync is configured,
    the same data.json is read/written in the user's repo so multiple devices stay in sync. */
 
-const VERSION = 'v2.0';
+const VERSION = 'v2.1';
 const STORAGE_KEY = 'shelfsleeve_data_v1';
 const SETTINGS_KEY = 'shelfsleeve_settings_v1';
 const $ = (s) => document.querySelector(s);
@@ -887,16 +887,40 @@ async function fetchVinylCover(title, artist) {
   return match.artworkUrl100.replace('100x100bb', '600x600bb');
 }
 
+function bookAuthorMatches(author, docAuthors) {
+  if (!author) return false;
+  const target = author.toLowerCase().trim();
+  if (!target) return false;
+  return (docAuthors || []).some(a => {
+    const cand = String(a).toLowerCase();
+    return cand.includes(target) || target.includes(cand);
+  });
+}
+
 async function fetchBookCover(title, author) {
   if (!title) return null;
-  const params = new URLSearchParams({ title, limit: '5' });
-  if (author) params.set('author', author);
+  // Combined q= field query matches translated/alternate-titled editions
+  // (structured title=/author= params only strict-match the primary title
+  // field, which misses e.g. Calvino's "Invisible Cities" catalogued as
+  // "Le città invisibili").
+  let q = `title:"${title}"`;
+  if (author) q += ` author:"${author}"`;
+  const params = new URLSearchParams({ q, limit: '15' });
   const res = await fetch(`https://openlibrary.org/search.json?${params.toString()}`);
   if (!res.ok) return null;
   const data = await res.json();
-  const match = (data.docs || []).find(d => d.cover_i);
-  if (!match) return null;
-  return `https://covers.openlibrary.org/b/id/${match.cover_i}-L.jpg`;
+  let docs = (data.docs || []).filter(d => d.cover_i);
+  if (!docs.length) return null;
+  // Require author confirmation when we have one to check against, to
+  // avoid false-positive title collisions (a wrong cover is worse than
+  // none). Rank by edition_count to prefer the most canonical edition.
+  if (author) {
+    const confirmed = docs.filter(d => bookAuthorMatches(author, d.author_name));
+    if (!confirmed.length) return null;
+    docs = confirmed;
+  }
+  docs.sort((a, b) => (b.edition_count || 0) - (a.edition_count || 0));
+  return `https://covers.openlibrary.org/b/id/${docs[0].cover_i}-L.jpg`;
 }
 
 async function fetchCover() {

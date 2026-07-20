@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T07:30:04.859520Z",
+  "updatedAt": "2026-07-20T07:47:30.736Z",
   "items": [
     {
       "id": "f0e203a1-7196-4589-bd4b-20a314a6a8d2",
@@ -43,7 +43,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/1052308-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -73,7 +73,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/4357869-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -88,7 +88,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/967823-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -163,7 +163,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/8979140-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -313,7 +313,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/963147-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -343,7 +343,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/2134557-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -373,7 +373,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/6975616-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -448,7 +448,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/595193-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -703,7 +703,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/12680231-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -748,7 +748,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/10107644-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -958,7 +958,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/13151269-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -1003,7 +1003,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/1022364-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -1033,7 +1033,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/5271497-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -1108,7 +1108,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/12736044-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -1138,7 +1138,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/1019557-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -1288,7 +1288,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/105600-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -1423,7 +1423,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/10551765-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
@@ -1753,7 +1753,7 @@
       "price": null,
       "status": "owned",
       "notes": "",
-      "image": null,
+      "image": "https://covers.openlibrary.org/b/id/900685-L.jpg",
       "addedAt": "2026-07-20T07:29:47.826962Z"
     },
     {
