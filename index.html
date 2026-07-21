@@ -64,6 +64,18 @@ nav.tabs::-webkit-scrollbar{display:none}
 }
 .tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:700}
 
+/* app switch */
+.applinks{display:flex;gap:8px;margin-top:12px;overflow-x:auto;scrollbar-width:none}
+.applinks::-webkit-scrollbar{display:none}
+.applink{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;
+  font-family:var(--font-body);font-size:11px;color:var(--mute);
+  background:var(--ink-2);border:1px solid var(--line);border-radius:999px;
+  padding:7px 12px;text-decoration:none;white-space:nowrap;
+}
+.applink:active{background:var(--ink-3)}
+.applink .arrow{font-size:10px}
+
 /* controls */
 .controls{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
 .search{
@@ -268,6 +280,10 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
       <div class="status" id="status">local</div>
       <div class="count" id="count"></div>
     </div>
+    <nav class="applinks" aria-label="Switch app">
+      <a class="applink" href="https://maxyongg.github.io/">&#8962; Home</a>
+      <a class="applink" href="https://maxyongg.github.io/media/">List <span class="arrow">&#8599;</span></a>
+    </nav>
     <nav class="tabs" id="tabs" role="tablist">
       <button class="tab" role="tab" data-k="book" aria-selected="true">Books</button>
       <button class="tab" role="tab" data-k="vinyl" aria-selected="false">Vinyls</button>
