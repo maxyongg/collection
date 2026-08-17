@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-08-17T15:25:28.581Z",
+  "updatedAt": "2026-08-17T15:26:09.584Z",
   "items": [
+    {
+      "id": "c16486a9-6f31-47ec-b743-d685266efc86",
+      "addedAt": "2026-08-17T15:26:09.584Z",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ad/10/fe/ad10fee6-76eb-7eaa-a632-c2afece21b53/LNCM-1175_PERSONA5-OST_h1_new.jpg/600x600bb.jpg",
+      "type": "vinyl",
+      "title": "Persona 5 (Original Soundtrack)",
+      "creator": "ATLUS Sound Team",
+      "year": "2017",
+      "format": "",
+      "genre": "Soundtrack",
+      "condition": "",
+      "status": "owned",
+      "notes": ""
+    },
     {
       "id": "e399f0cf-e6e1-4603-83d2-4b2766187877",
       "addedAt": "2026-08-17T15:25:28.581Z",
