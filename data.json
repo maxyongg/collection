@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-08-17T15:26:31.456Z",
+  "updatedAt": "2026-08-17T15:27:17.757Z",
   "items": [
+    {
+      "id": "2e996b1c-8fe8-477f-a13c-6f043f42bfbd",
+      "addedAt": "2026-08-17T15:27:17.757Z",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fb/fe/a5/fbfea51a-0130-d557-c1f4-9e5e98b7bab8/094638511359.jpg/600x600bb.jpg",
+      "type": "vinyl",
+      "title": "Sound of Silver",
+      "creator": "LCD Soundsystem",
+      "year": "2007",
+      "format": "",
+      "genre": "Electronic",
+      "condition": "",
+      "status": "owned",
+      "notes": ""
+    },
     {
       "id": "9ce57c6f-849e-4e1b-926f-519dd9a1e25c",
       "addedAt": "2026-08-17T15:26:31.456Z",
