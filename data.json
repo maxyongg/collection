@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-08-17T15:26:09.584Z",
+  "updatedAt": "2026-08-17T15:26:31.456Z",
   "items": [
+    {
+      "id": "9ce57c6f-849e-4e1b-926f-519dd9a1e25c",
+      "addedAt": "2026-08-17T15:26:31.456Z",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/92/93/39/9293397f-a707-237e-ec7e-0ca613a67e3c/06UMGIM04143.rgb.jpg/600x600bb.jpg",
+      "type": "vinyl",
+      "title": "The Velvet Underground & Nico (45th Anniversary Edition)",
+      "creator": "The Velvet Underground & Nico",
+      "year": "1967",
+      "format": "",
+      "genre": "Rock",
+      "condition": "",
+      "status": "owned",
+      "notes": ""
+    },
     {
       "id": "c16486a9-6f31-47ec-b743-d685266efc86",
       "addedAt": "2026-08-17T15:26:09.584Z",
