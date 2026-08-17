@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-07-20T07:50:51.295Z",
+  "updatedAt": "2026-08-17T15:25:28.581Z",
   "items": [
+    {
+      "id": "e399f0cf-e6e1-4603-83d2-4b2766187877",
+      "addedAt": "2026-08-17T15:25:28.581Z",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5f/fa/56/5ffa56c2-ea1f-7a17-6bad-192ff9b6476d/825646124206.jpg/600x600bb.jpg",
+      "type": "vinyl",
+      "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
+      "creator": "David Bowie",
+      "year": "1972",
+      "format": "",
+      "genre": "Rock",
+      "condition": "",
+      "status": "owned",
+      "notes": ""
+    },
     {
       "id": "f0e203a1-7196-4589-bd4b-20a314a6a8d2",
       "type": "book",
