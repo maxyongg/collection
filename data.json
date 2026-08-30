@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-08-17T15:28:18.653Z",
+  "updatedAt": "2026-08-30T09:32:53.514Z",
   "items": [
+    {
+      "id": "c613b086-f4e4-404f-9ed3-3919699e4534",
+      "addedAt": "2026-08-30T09:32:53.514Z",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg",
+      "type": "vinyl",
+      "title": "OK Computer",
+      "creator": "Radiohead",
+      "year": "1997",
+      "format": "",
+      "genre": "Alternative",
+      "condition": "",
+      "status": "owned",
+      "notes": ""
+    },
     {
       "id": "41c84ed2-2456-46b2-8074-2c7e3069e1be",
       "addedAt": "2026-08-17T15:28:18.653Z",
