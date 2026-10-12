@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-08-30T09:32:53.514Z",
+  "updatedAt": "2026-10-12T22:16:34.196Z",
   "items": [
+    {
+      "id": "5352ed4a-965f-4d89-8802-d1b2efc31068",
+      "addedAt": "2026-10-12T22:16:34.196Z",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0e/90/3c/0e903c43-9d81-f91b-90f1-727a58f7fb2c/00602498824030.rgb.jpg/600x600bb.jpg",
+      "type": "vinyl",
+      "title": "Late Registration",
+      "creator": "Kanye West",
+      "year": "2005",
+      "format": "",
+      "genre": "Hip-Hop/Rap",
+      "condition": "",
+      "status": "owned",
+      "notes": ""
+    },
     {
       "id": "c613b086-f4e4-404f-9ed3-3919699e4534",
       "addedAt": "2026-08-30T09:32:53.514Z",
